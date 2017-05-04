@@ -1,7 +1,7 @@
-import Layout from '../app/components/Layout'
+import CompMain from '../app/components/main'
 
 export default () => (
-  <Layout>
+  <CompMain>
     <p>About :))) </p>
-  </Layout>
+  </CompMain>
 )

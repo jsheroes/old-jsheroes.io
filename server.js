@@ -24,7 +24,7 @@ app
     server.get('*', (req, res) => {
       return handle(req, res)
     })
-    
+
     // start
     server.listen(config.port, err => {
       if (err) throw err

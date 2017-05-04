@@ -1,10 +1,10 @@
-import Layout from '../app/components/Layout.js'
+import CompMain from '../app/components/main'
 import fetch from 'isomorphic-unfetch'
 
 const Post = props => (
-  <Layout>
+  <CompMain>
     <h1>Test</h1>
-  </Layout>
+  </CompMain>
 ) /*
 
 Post.getInitialProps = async function (context) {
