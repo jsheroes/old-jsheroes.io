@@ -9,6 +9,7 @@ const Layout = props => (
     {/* we're using next/head to place this styles in the head tag */}
     <Head>
       <Style />
+      <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet" />
     </Head>
     <Nav />
     {props.children}

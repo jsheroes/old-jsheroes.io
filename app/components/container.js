@@ -2,7 +2,6 @@ import { style, mediaQueries } from '../constants'
 
 const Container = (props) => (
   <div>
-    <div>test</div>
     <style jsx>{`
     
     div {
