@@ -7,23 +7,22 @@ import Footer from '../components/footer'
 import { styles, mediaQueries } from '../constants'
 
 class Layout extends Component {
-  
   constructor(props) {
     super(props)
   }
-  
+
   handleWindowSizeChange(ev) {
-    console.log(ev)  
+    console.log(ev)
   }
-  
+
   componentDidMount() {
     window.addEventListener('resize', this.handleWindowSizeChange)
   }
-  
+
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleWindowSizeChange)
   }
-  
+
   render() {
     return (
       <StickyContainer>
@@ -36,17 +35,21 @@ class Layout extends Component {
           />
         </Head>
         <Sticky>
-          {
-            ({ isSticky, wasSticky, style, distanceFromTop, distanceFromBottom, calculatedHeight }) => {
-              return (
-                <Nav style={style} />
-              )
-            }
-          }
-          
+          {({
+            isSticky,
+            wasSticky,
+            style,
+            distanceFromTop,
+            distanceFromBottom,
+            calculatedHeight
+          }) => {
+            console.log(distanceFromTop)
+            return <Nav style={style} />
+          }}
+
         </Sticky>
-        
-        { this.props.children }
+
+        {this.props.children}
         <Footer />
       </StickyContainer>
     )
@@ -56,7 +59,7 @@ class Layout extends Component {
 const Style = () => (
   <style jsx>{`
 
-    html, body, ul {
+    html, body, ul, h1, h2, h3 {
       border: 0;
       margin: 0;
       padding: 0;

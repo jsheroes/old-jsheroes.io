@@ -1,9 +1,12 @@
+import Container from '../components/container'
 import { styles } from '../constants'
 
 const Section = props => (
   <section>
     <Style {...props} />
-    {props.children}
+    <Container>
+      {props.children}
+    </Container>
   </section>
 )
 
