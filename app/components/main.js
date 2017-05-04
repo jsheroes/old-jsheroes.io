@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import Header from '../containers/header'
-import Nav from '../containers/nav'
+import Header from '../header'
+import Nav from '../nav'
 import Footer from '../components/footer'
 import { styles } from '../constants'
 
