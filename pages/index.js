@@ -1,4 +1,4 @@
-import Layout from '../components/Layout.js'
+import Layout from '../app/components/Layout.js'
 import Link from 'next/link'
 
 function getPosts() {
@@ -19,7 +19,7 @@ const PostLink = ({ post }) => (
 
 export default () => (
   <Layout>
-    <h1>My Blog</h1>
+    <h1>My Blog is cool ---</h1>
     <ul>
       {getPosts().map(post => <PostLink key={post.id} post={post} />)}
     </ul>

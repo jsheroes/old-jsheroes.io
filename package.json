@@ -5,9 +5,9 @@
   "main": "server.js",
   "scripts": {
     "prettier": "prettier --write --no-semi --single-quote '{*.js,{app,config}/**/*.js}'",
-    "dev": "node index.js",
-    "build": "next build build",
-    "start": "NODE_ENV=production node index.js"
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next build | NODE_ENV=production node server.js"
   },
   "keywords": [],
   "author": "",
