@@ -39,5 +39,5 @@ const menuItems = [
   {
     url: '#sponsors',
     label: 'contact'
-  },
+  }
 ]
