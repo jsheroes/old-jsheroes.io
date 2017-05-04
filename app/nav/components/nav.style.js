@@ -1,5 +1,5 @@
 const style = () => (
-  <style jsx>
+  <style>
     {`
 
   ul {
@@ -8,6 +8,12 @@ const style = () => (
   
   nav {
     background-color: black;
+  }
+  
+  img {
+    display: table-cell;
+    vertical-align: middle;
+    float: left;
   }
   
   li {

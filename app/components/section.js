@@ -7,8 +7,8 @@ const Section = props => (
   </section>
 )
 
-const Style = props => (
-  <style jsx>
+const Style = (props) => (
+  <style>
     {`
     
     section {

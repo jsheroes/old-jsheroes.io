@@ -2,7 +2,7 @@ import Head from 'next/head'
 import Header from '../header'
 import Nav from '../nav'
 import Footer from '../components/footer'
-import { styles } from '../constants'
+import { styles, mediaQueries } from '../constants'
 
 const Layout = props => (
   <div>
@@ -17,7 +17,7 @@ const Layout = props => (
 )
 
 const Style = () => (
-  <style>{`
+  <style jsx>{`
 
     html, body, ul {
       border: 0;
@@ -37,6 +37,7 @@ const Style = () => (
     a {
       text-decoration: none;
     }
+    
   `}</style>
 )
 
