@@ -1,6 +1,6 @@
 import { style, mediaQueries } from '../constants'
 
-const Container = (props) => (
+const Container = props => (
   <div>
     <style jsx>{`
     
@@ -28,7 +28,7 @@ const Container = (props) => (
 
     
   `}</style>
-    { props.children }
+    {props.children}
   </div>
 )
 
@@ -55,7 +55,5 @@ const Style = () => (
     }
   `}</style>
 )
-  
-
 
 module.exports = Container

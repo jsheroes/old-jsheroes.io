@@ -5,10 +5,10 @@ import Container from '../../components/container'
 import Style from './nav.style'
 
 const Header = props => (
-  <nav>
+  <nav style={props.style}>
     <Container>
       <Style />
-      <img src='static/img/website_logo.png' />
+      <img src="static/img/website_logo.png" />
       <ul>
         {props.menuItems.map((item, key) => {
           return (

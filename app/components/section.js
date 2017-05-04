@@ -7,7 +7,7 @@ const Section = props => (
   </section>
 )
 
-const Style = (props) => (
+const Style = props => (
   <style>
     {`
     

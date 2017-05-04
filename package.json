@@ -17,6 +17,7 @@
     "isomorphic-unfetch": "^1.0.0",
     "next": "^2.3.0",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-sticky": "^6.0.0"
   }
 }

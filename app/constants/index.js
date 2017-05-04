@@ -7,8 +7,8 @@ module.exports = {
     mainColor5: '#228dcb' // blue
   },
   mediaQueries: {
-    XL: "1200px",
-    L: "992px",
-    S: "768px",
+    XL: '1200px',
+    L: '992px',
+    S: '768px'
   }
 }
