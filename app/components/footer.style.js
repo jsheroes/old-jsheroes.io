@@ -9,10 +9,10 @@ const FooterStyle = () => (
       text-align: center;
     }
 
-    li {
+    li, h2, p {
       color: white
     }
-    
+
   `}
   </style>
 )
