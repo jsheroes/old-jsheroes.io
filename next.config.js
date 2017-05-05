@@ -2,6 +2,6 @@
 module.exports = {
   webpack: null,
   poweredByHeader: false,
-  //distDir: '.next',
+  //distDir: '.build',
   assetPrefix: ''
 }

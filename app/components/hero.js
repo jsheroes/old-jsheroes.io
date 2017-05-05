@@ -3,15 +3,16 @@ import { styles, mediaQueries } from '../constants'
 
 const Hero = () => (
   <div style={{ minHeight: 800, backgroundColor: styles.mainColor5 }}>
-    <Container>
-      <Style />
-      <h1>JavaScript <br /> International Conference</h1>
-    </Container>
-  </div>
-)
-
-const Style = () => (
-  <style jsx>{`
+    <style jsx>{`
+    
+    div {
+      background-image: url('static/img/header-background.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      overflow: hidden;
+    }
     
     h1 {
       padding-top: 50px;
@@ -38,6 +39,10 @@ const Style = () => (
     }
     
   `}</style>
+    <Container>
+      <h1>JavaScript <br /> International Conference</h1>
+    </Container>
+  </div>
 )
 
 module.exports = Hero
