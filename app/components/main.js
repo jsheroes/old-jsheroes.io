@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Header from '../header'
 import Nav from '../nav'
 import Footer from '../components/footer'
+import Speaker from '../components/speaker/speaker'
 import { styles, mediaQueries } from '../constants'
 
 class Layout extends Component {
@@ -50,6 +51,7 @@ class Layout extends Component {
         </Sticky>
 
         {this.props.children}
+        <Speaker />
         <Footer />
       </StickyContainer>
     )
