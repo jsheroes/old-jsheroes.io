@@ -12,6 +12,8 @@ const style = () => (
     nav {
       background-color: black;
       position: absolute;
+      top: 0;
+      z-index: 1;
     }
     
     img {

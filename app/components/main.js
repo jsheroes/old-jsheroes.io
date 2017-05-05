@@ -51,6 +51,8 @@ class Layout extends Component {
         </Sticky>
 
         {this.props.children}
+        
+        {/* the Speaker component will have to be rendered inside another container. Just added it here to test that it works */}
         <Speaker />
         <Footer />
       </StickyContainer>
