@@ -46,3 +46,4 @@ const Hero = () => (
 )
 
 module.exports = Hero
+
