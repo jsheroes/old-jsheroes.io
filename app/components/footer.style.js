@@ -5,6 +5,7 @@ const FooterStyle = () => (
     {`
     
     .the-footer {
+      padding: 50px 0;
       background-color: ${styles.mainColor2};
       text-align: center;
     }
@@ -22,7 +23,7 @@ const FooterStyle = () => (
       position: relative;
       text-align: center;
     }
-      
+
     .the-ul {
       margin: 0;
       padding: 0;
@@ -50,14 +51,23 @@ const FooterStyle = () => (
       width: 80px;
       transition-duration: .5s;
     }
-      
+
     .the-anchors:hover {
       color: #228dcb;
       fill: #228dcb;
       border-color: #0098FF;
     }
   
-
+    @media only screen and (max-width: 767px) {
+      .the-anchors {
+        font-size: 25px;
+        height: 50px;
+        line-height: 48px;
+        margin: 6px;
+        width: 50px;
+      }
+    }
+    
     .the-li, .the-h2, .the-p {
       color: white;
     }
@@ -75,6 +85,42 @@ const FooterStyle = () => (
       font-size: 18px;
       line-height: 32px;
       font-weight: 300;
+    }
+    
+    .footer-p {
+      margin: 0 0 10px;
+      color: #fff;
+      font-size: 16px;
+      line-height: 32px;
+      font-weight: 300;
+    }
+    
+    .white-underline-text {
+      color: #fff;
+      font-size: 16px;
+      text-decoration: underline;
+      text-transform: none;
+      transition-duration: .5s;
+    }
+    
+    .white-underline-text:hover {
+      color: #0098FF;
+      text-decoration: none;
+    }
+    
+    .vertical-divider {
+      position: relative;
+      top: -1px;
+    }
+    
+    .text-blue {
+      color: #0098FF;
+      font-size: 16px;
+    }
+    
+    span {
+      position: relative;
+      top: 6px;
     }
     
   `}

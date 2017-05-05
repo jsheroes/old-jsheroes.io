@@ -1,5 +1,5 @@
-import Style from './footer.style'
 import Link from 'next/link'
+import Style from './footer.style'
 
 const Footer = () => (
   <footer>
@@ -42,16 +42,36 @@ const Footer = () => (
     </div>
     
     <div className="the-footer">
-    
-      <ul>
-        <li>
-          <Link href="/"><a>Alin</a></Link>
-        </li>
-        <li>Paul</li>
-        <li>Mihai</li>
-      </ul>
+      <p className="footer-p">
+        <Link href="/">
+          <a className="white-underline-text">
+            Code of Conduct
+          </a>
+        </Link>
+        
+        <span className="vertical-divider">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        
+        <Link href="/">
+          <a className="white-underline-text">
+            About the Community
+          </a>
+        </Link>
+      </p>
+
+      <p className="footer-p">
+        Copyright © 2017&nbsp;
+        <Link href="/">
+          <a className="text-blue">JSHeroes</a>
+        </Link>
+        . All Rights Reserved
+      </p>
+      
+      <p className="footer-p">
+        Made with &nbsp; 
+        <span><i className="fa fa-heart fa-2x" aria-hidden="true"></i></span>
+        &nbsp; by the Cluj JavaScripters Community
+      </p>
     </div>
-    
   </footer>
 )
 
