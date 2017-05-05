@@ -13,4 +13,5 @@ git clone git@github.com:cluj-javascripters/jsheroes.io.git .
 
 Copy `config.example.js` into `config.js` and put there your own settings.
 
+```bash
 `npm run dev`
