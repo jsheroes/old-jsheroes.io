@@ -1,5 +1,4 @@
 node_modules
 .next
 .build
-config.js
 npm-debug.log
