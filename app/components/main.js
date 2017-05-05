@@ -33,6 +33,10 @@ class Layout extends Component {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
             rel="stylesheet"
           />
+          <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+          />
         </Head>
         <Sticky>
           {({
