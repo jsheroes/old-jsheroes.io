@@ -1,0 +1,23 @@
+{
+  "name": "paul-next",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "prettier": "prettier --write --no-semi --single-quote '{*.js,{app,config}/**/*.js}'",
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next build | NODE_ENV=production node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "isomorphic-unfetch": "^1.0.0",
+    "next": "^2.3.0",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-sticky": "^6.0.0"
+  }
+}
