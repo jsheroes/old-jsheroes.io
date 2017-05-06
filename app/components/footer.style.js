@@ -1,9 +1,8 @@
-import { styles } from '../constants'
+import { styles, mediaQueries } from '../constants'
 
 const FooterStyle = () => (
   <style jsx>
     {`
-    
     .the-footer {
       padding: 50px 0;
       background-color: ${styles.mainColor2};
@@ -58,7 +57,7 @@ const FooterStyle = () => (
       border-color: #0098FF;
     }
   
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: ${mediaQueries.S}) {
       .the-anchors {
         font-size: 25px;
         height: 50px;
@@ -85,6 +84,10 @@ const FooterStyle = () => (
       font-size: 18px;
       line-height: 32px;
       font-weight: 300;
+    }
+    
+    .mail-to {
+      text-transform: none;
     }
     
     .footer-p {
