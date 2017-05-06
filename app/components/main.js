@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Nav from '../components/nav'
 import Hero from '../components/hero'
 import Footer from '../components/footer'
+import Speaker from '../components/speaker/speaker'
 
 class Layout extends Component {
   constructor(props) {
@@ -31,10 +32,17 @@ class Layout extends Component {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
             rel="stylesheet"
           />
+          <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+          />
         </Head>
         <Nav />
         <Hero />
         {this.props.children}
+
+        {/* the Speaker component will have to be rendered inside another container. Just added it here to test that it works */}
+        <Speaker />
         <Footer />
       </div>
     )
