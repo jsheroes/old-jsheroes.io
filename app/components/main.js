@@ -1,10 +1,8 @@
 import React, { Component } from 'react'
-import { StickyContainer, Sticky } from 'react-sticky'
 import Head from 'next/head'
-import Header from '../header'
-import Nav from '../nav'
+import Nav from '../components/nav'
+import Hero from '../components/hero'
 import Footer from '../components/footer'
-import { styles, mediaQueries } from '../constants'
 
 class Layout extends Component {
   constructor(props) {
@@ -25,8 +23,8 @@ class Layout extends Component {
 
   render() {
     return (
-      <StickyContainer>
-        {/* we're using next/head to place this styles in the head tag */}
+      <div>  
+      {/* we're using next/head to place this styles in the head tag */}
         <Head>
           <Style />
           <link
@@ -34,24 +32,11 @@ class Layout extends Component {
             rel="stylesheet"
           />
         </Head>
-        <Sticky>
-          {({
-            isSticky,
-            wasSticky,
-            style,
-            distanceFromTop,
-            distanceFromBottom,
-            calculatedHeight
-          }) => {
-            console.log(distanceFromTop)
-            return <Nav style={style} />
-          }}
-
-        </Sticky>
-
+        <Nav />
+        <Hero />
         {this.props.children}
         <Footer />
-      </StickyContainer>
+      </div>
     )
   }
 }

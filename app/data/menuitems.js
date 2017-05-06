@@ -1,17 +1,4 @@
-import React, { Component } from 'react'
-import CompNav from './components/nav'
-
-export default class ContainerHeader extends Component {
-  componentDidMount() {
-    window.addEventListener('resize', ev => console.log(ev))
-  }
-
-  render() {
-    return <CompNav menuItems={menuItems} {...this.props} />
-  }
-}
-
-const menuItems = [
+module.exports = [
   {
     url: '#home',
     label: 'home'
