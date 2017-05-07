@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
-import { StickyContainer, Sticky } from 'react-sticky'
 import Head from 'next/head'
-import Header from '../header'
-import Nav from '../nav'
+import Nav from '../components/nav'
+import Hero from '../components/hero'
 import Footer from '../components/footer'
 import Speaker from '../components/speaker/speaker'
-import { styles, mediaQueries } from '../constants'
 
 class Layout extends Component {
   constructor(props) {
@@ -26,7 +24,7 @@ class Layout extends Component {
 
   render() {
     return (
-      <StickyContainer>
+      <div>
         {/* we're using next/head to place this styles in the head tag */}
         <Head>
           <Style />
@@ -34,28 +32,19 @@ class Layout extends Component {
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
             rel="stylesheet"
           />
+          <link
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            rel="stylesheet"
+          />
         </Head>
-        <Sticky>
-          {({
-            isSticky,
-            wasSticky,
-            style,
-            distanceFromTop,
-            distanceFromBottom,
-            calculatedHeight
-          }) => {
-            console.log(distanceFromTop)
-            return <Nav style={style} />
-          }}
-
-        </Sticky>
-
+        <Nav />
+        <Hero />
         {this.props.children}
-        
-        {/* the Speaker component will have to be rendered inside another container. Just added it here to test that it works */}
+
+        { /* the Speaker component will have to be rendered inside another container. Just added it here to test that it works */}
         <Speaker />
         <Footer />
-      </StickyContainer>
+      </div>
     )
   }
 }

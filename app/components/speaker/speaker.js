@@ -9,11 +9,15 @@ const speakerInfo = {
 
 const Speaker = () => (
   <div>
-    <Style/>
+    <Style />
     <div className="speaker-box">
       <div className="speaker-sec">
         <div className="speaker-info-box">
-          <div className="speaker-img" data-speaker={speakerInfo.name}> <img src="static/img/speakers/mark.jpg" alt={speakerInfo.name}/> </div>
+          <div className="speaker-img" data-speaker={speakerInfo.name}>
+            {' '}
+            <img src="static/img/speakers/mark.jpg" alt={speakerInfo.name} />
+            {' '}
+          </div>
           <div className="speaker-hover">
             <div className="speaker-more-cta text-center">
               <span>find out more</span>
@@ -22,7 +26,7 @@ const Speaker = () => (
         </div>
         <div className="speaker-info">
           <h5 className="text-blue">{speakerInfo.full_name}</h5>
-          <h6>{speakerInfo.position}<br/>{speakerInfo.company}</h6>
+          <h6>{speakerInfo.position}<br />{speakerInfo.company}</h6>
         </div>
       </div>
     </div>

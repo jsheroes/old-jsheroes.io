@@ -1,4 +1,5 @@
 node_modules
 .next
 .build
+.vscode
 npm-debug.log
