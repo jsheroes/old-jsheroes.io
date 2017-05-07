@@ -35,7 +35,7 @@ class Hero extends Component {
     return (
       <div className="hero" style={{ height: this.state.windowHeight }}>
         <Container>
-          <h1>JavaScript <br /> International Conferences</h1>
+          <h1>JavaScript <br /> International Conference</h1>
         </Container>
         <style jsx>{`
           
