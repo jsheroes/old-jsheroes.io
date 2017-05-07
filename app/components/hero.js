@@ -1,5 +1,5 @@
 import { Component } from 'react'
-import Container from '../components/container'
+import Section from '../components/common/section'
 import { styles, mediaQueries } from '../constants'
 
 class Hero extends Component {
@@ -14,7 +14,6 @@ class Hero extends Component {
   }
 
   updateHeroSize(ev) {
-    console.log(ev.target.innerHeight)
     this.setState({
       windowHeight: ev.target.innerHeight
     })
@@ -34,9 +33,9 @@ class Hero extends Component {
   render() {
     return (
       <div className="hero" style={{ height: this.state.windowHeight }}>
-        <Container>
+        <Section>
           <h1>JavaScript <br /> International Conference</h1>
-        </Container>
+        </Section>
         <style jsx>{`
           
           div {

@@ -1,10 +1,10 @@
-import Container from '../components/container'
+import Section from '../components/common/section'
 import { styles, mediaQueries } from '../constants'
 
 const About = () => (
-  <Container>
-    <Style />
-    <div id="about">
+
+  <Section>
+    <div>
       <h2>About Our Event</h2>
       <p>
         We’re planning for <strong>JSHeroes</strong> to be the biggest tech
@@ -41,65 +41,61 @@ const About = () => (
         </strong>.
       </p>
     </div>
-  </Container>
-)
+    <style jsx>{`
+      div {
+        padding: 140px 0;
+      }
 
-const Style = () => (
-  <style jsx>{`
-    #about {
-      padding: 140px 0;
-    }
-    
-    h2 {
-      text-align: center;
-      font-size: 52px;
-      color: ${styles.mainColor4};
-      font-weight: 700;
-      margin: 0 auto 30px;
-    }
-    
-    p {
-      margin: 0 0 40px;
-      font-size: 18px;
-      color: #555;
-      line-height: 32px;
-      font-weight: 300;
-      text-align: center;
-    }
+      h2 {
+        text-align: center;
+        font-size: 52px;
+        color: ${styles.mainColor4};
+        font-weight: 700;
+        margin: 0 auto 30px;
+      }
 
-    @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
-      #about {
-        padding: 90px 0;
-      }
-      
-      h2 {
-        font-size: 46px;
-      }
-      
       p {
-        font-size: 17px;
-        line-height: 30px;
-        margin-bottom: 30px;
+        margin: 0 0 40px;
+        font-size: 18px;
+        color: #555;
+        line-height: 32px;
+        font-weight: 300;
+        text-align: center;
       }
-    }
-    
-    @media only screen and (max-width: ${mediaQueries.S}) {
-      #about {
-        padding: 80px 0;
+
+      @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
+        div {
+          padding: 90px 0;
+        }
+        
+        h2 {
+          font-size: 46px;
+        }
+        
+        p {
+          font-size: 17px;
+          line-height: 30px;
+          margin-bottom: 30px;
+        }
       }
-      
-      h2 {
-        font-size: 33px;
+
+      @media only screen and (max-width: ${mediaQueries.S}) {
+        div {
+          padding: 80px 0;
+        }
+        
+        h2 {
+          font-size: 33px;
+        }
+        
+        p {
+          font-size: 16px;
+          line-height: 28px;
+          margin-bottom: 20px;
+        }
       }
-      
-      p {
-        font-size: 16px;
-        line-height: 28px;
-        margin-bottom: 20px;
-      }
-    }
-    
-  `}</style>
+    `}</style>
+  </Section>
 )
 
 module.exports = About

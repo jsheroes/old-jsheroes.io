@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import Head from 'next/head'
 import Nav from '../components/nav'
 import Hero from '../components/hero'
@@ -10,8 +10,8 @@ class Layout extends Component {
     super(props)
   }
 
-  handleWindowSizeChange(ev) {
-    console.log(ev)
+  handleWindowSizeChange() {
+    // 
   }
 
   componentDidMount() {

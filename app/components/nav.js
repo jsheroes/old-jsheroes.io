@@ -1,7 +1,6 @@
 import { Component } from 'react'
 
 import menuItems from '../data/menuitems'
-import Container from '../components/container'
 
 import { mediaQueries } from '../constants'
 
@@ -39,18 +38,16 @@ export default class Nav extends Component {
   render() {
     return (
       <nav style={this.props.style} className={this.state.smallNav ? 'smallNav': 'bigNav'}>
-        <Container>
-          <img src="static/img/website_logo.png"/>
-          <ul>
-            {menuItems.map((item, key) => {
-              return (
-                <li key={key}>
-                  <a href={item.url}>{item.label}</a>
-                </li>
-              )
-            })}
-          </ul>
-        </Container>
+        <img src="static/img/website_logo.png"/>
+        <ul>
+          {menuItems.map((item, key) => {
+            return (
+              <li key={key}>
+                <a href={item.url}>{item.label}</a>
+              </li>
+            )
+          })}
+        </ul>
         <style jsx>{`
 
           ul {
