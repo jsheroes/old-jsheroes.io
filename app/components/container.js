@@ -5,7 +5,8 @@ const Container = props => (
     <style jsx>{`
     
     div {
-      margin: auto;
+      padding: 0 15px;
+      margin: 0 auto;
     }
     
     @media (min-width: ${mediaQueries.S}) {
@@ -22,7 +23,7 @@ const Container = props => (
     
     @media (min-width: ${mediaQueries.XL}) {
       div {
-        width: 1178px;
+        width: 1140px;
       }
     }
 

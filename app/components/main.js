@@ -24,8 +24,8 @@ class Layout extends Component {
 
   render() {
     return (
-      <div>  
-      {/* we're using next/head to place this styles in the head tag */}
+      <div>
+        {/* we're using next/head to place this styles in the head tag */}
         <Head>
           <Style />
           <link

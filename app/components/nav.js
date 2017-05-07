@@ -1,16 +1,15 @@
-import menuItems from '../data/menuitems' 
+import menuItems from '../data/menuitems'
 import Container from '../components/container'
 
-const defaultLineHeight = "100px"
-const smallLineHeight = "50px"
+const defaultLineHeight = '100px'
+const smallLineHeight = '50px'
 
 import { mediaQueries } from '../constants'
-
 
 const Header = props => (
   <nav style={props.style}>
     <Container>
-      <img src="static/img/website_logo.png"/>
+      <img src="static/img/website_logo.png" />
       <ul>
         {menuItems.map((item, key) => {
           return (

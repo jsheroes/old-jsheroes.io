@@ -88,6 +88,7 @@ const FooterStyle = () => (
     
     .mail-to {
       text-transform: none;
+      color: white;
     }
     
     .footer-p {

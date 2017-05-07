@@ -3,12 +3,11 @@ import Container from '../components/container'
 import { styles, mediaQueries } from '../constants'
 
 class Hero extends Component {
-  
   constructor(props) {
     super(props)
     this.state = {
       windowHeight: 800,
-      top: 0,
+      top: 0
     }
 
     this.updateHeroSize = this.updateHeroSize.bind(this)
@@ -31,9 +30,9 @@ class Hero extends Component {
   componentWillUnMount() {
     window.removeEventListener('resize', this.updateHeroSize)
   }
-  
+
   render() {
-    return ( 
+    return (
       <div className="hero" style={{ height: this.state.windowHeight }}>
         <Container>
           <h1>JavaScript <br /> International Conferences</h1>
@@ -72,7 +71,7 @@ class Hero extends Component {
               font-size: 90px;
             }
           }
-      `}</style>    
+      `}</style>
       </div>
     )
   }
