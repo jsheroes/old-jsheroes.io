@@ -1,5 +1,12 @@
 module.exports = [
   {
+    name: 'rauch',
+    full_name: 'Guillermo Rauch',
+    position: 'Founder and CEO',
+    company: 'Zeit',
+    img: 'GuillermoRauch.jpg'
+  },
+  {
     name: 'liran',
     full_name: 'Liran Tal',
     position: 'Engineering Manager',
@@ -123,6 +130,6 @@ module.exports = [
     full_name: 'Robert Onodi',
     position: 'Software Architect',
     company: 'Evozon',
-    img: 'ronodi.jpg'
+    img: 'ronodi.png'
   }
 ]

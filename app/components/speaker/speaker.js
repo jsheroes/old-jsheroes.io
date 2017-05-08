@@ -1,21 +1,13 @@
 import { styles, mediaQueries } from '../../constants'
 
-const speakerInfo = {
-  name: 'mark',
-  full_name: 'Mark Dalgleish',
-  position: 'DesignOps Lead',
-  company: 'SEEK'
-}
-
-const Speaker = () => (
-  <div>
+const Speaker = (props) => (
+  <div style={{marginLeft: 'auto', marginRight: 'auto'}}>
     <Style />
-    <div className="speaker-box">
       <div className="speaker-sec">
         <div className="speaker-info-box">
-          <div className="speaker-img" data-speaker={speakerInfo.name}>
+          <div className="speaker-img">
             {' '}
-            <img src="static/img/speakers/mark.jpg" alt={speakerInfo.name} />
+            <img src={"static/img/speakers/" + props.data.img} alt={props.data.name} />
             {' '}
           </div>
           <div className="speaker-hover">
@@ -25,19 +17,15 @@ const Speaker = () => (
           </div>
         </div>
         <div className="speaker-info">
-          <h5 className="text-blue">{speakerInfo.full_name}</h5>
-          <h6>{speakerInfo.position}<br />{speakerInfo.company}</h6>
+          <h5 className="text-blue">{props.data.full_name}</h5>
+          <h6>{props.data.position}<br />{props.data.company}</h6>
         </div>
       </div>
-    </div>
   </div>
 )
 
 const Style = () => (
   <style jsx>{`
-    .speaker-box {
-      width: 100%;
-    }
     .speaker-sec {
       text-align: center;
     }
@@ -49,6 +37,7 @@ const Style = () => (
       margin: 0 auto;
       border: 12px solid #ccc;
       overflow: hidden;
+      box-sizing: border-box;
     }
     .speaker-img {
       cursor: pointer;
@@ -111,16 +100,36 @@ const Style = () => (
       color: #0098FF!important;
     }
     
+    
+    .speaker-box {
+      width: 100%;
+      display: inline-flex;
+    }
     @media (min-width: ${mediaQueries.S}) {
       .speaker-box {
-        width: 100%
+        width: 50%
       }
     }
-    
     @media (min-width: ${mediaQueries.XL}) {
       .speaker-box {
         width: 25%
       }
+    }
+      @media (min-width: ${mediaQueries.XL}) {
+        .a-third .speaker-box {
+          width: 33.33333333%
+        }
+      }
+
+    .section-header {
+      margin-bottom: 80px;
+    }
+    .row {
+      margin-right: -15px;
+      margin-left: -15px;
+      display: table;
+      content: " ";
+      width: 100%;
     }
     
   `}</style>
