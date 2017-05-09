@@ -1,21 +1,23 @@
 import { Component } from 'react'
-
 import menuItems from '../data/menuitems'
-
-import { mediaQueries } from '../constants'
-
+import { styles, mediaQueries } from '../constants'
 const initialOpacity = 0.5
 
 export default class Nav extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      height: 100,
-      opacity: 1,
-      smallNav: false
+      height: 100,      
+      smallNav: false,
+      currentHash: '',
     }
 
     this.handleScroll = this.handleScroll.bind(this)
+    this.handleHashChange = this.handleHashChange.bind(this)
+  }
+
+  handleHashChange(ev) {
+    this.setState({ currentHash: ev.newURL.split('#')[1] })
   }
 
   handleScroll() {
@@ -30,10 +32,12 @@ export default class Nav extends Component {
 
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll)
+    window.addEventListener('hashchange', this.handleHashChange)
   }
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
+    window.removeEventListener('hashchange', this.handleHashChange)    
   }
 
   render() {
@@ -45,9 +49,10 @@ export default class Nav extends Component {
         <img src="static/img/website_logo.png" />
         <ul>
           {menuItems.map((item, key) => {
+            const active = `#${this.state.currentHash}` === item.url ? 'active': ''
             return (
               <li key={key}>
-                <a href={item.url}>{item.label}</a>
+                <a href={item.url} className={active}>{item.label}</a>
               </li>
             )
           })}
@@ -91,6 +96,9 @@ export default class Nav extends Component {
           }
           .bigNav {
             animation: bigNav 0.5s forwards;
+          }
+          .active {
+            color: ${styles.mainColor6}
           }
 
           @keyframes nav {

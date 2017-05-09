@@ -1,19 +1,21 @@
+import ScrollableAnchor from 'react-scrollable-anchor'
 import Section from '../components/common/section'
 import { styles, mediaQueries } from '../constants'
 
 const Sponsors = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
-    <div>
-      <h2>Our Sponsors</h2>
-      <p>
-        If you wish to participate as a sponsor to our event contact us &nbsp;
-        <a className="mail-to" href="mailto: contact@jsheroes.io" target="_top">
-          <strong>welcome@jsheroes.io</strong>
-        </a>
-      </p>
-      <p>These are the companies that joined our mission:</p>
-    </div>
-
+    <ScrollableAnchor id={'sponsors'}>
+      <div>
+        <h2>Our Sponsors</h2>
+        <p>
+          If you wish to participate as a sponsor to our event contact us &nbsp;
+          <a className="mail-to" href="mailto: contact@jsheroes.io" target="_top">
+            <strong>welcome@jsheroes.io</strong>
+          </a>
+        </p>
+        <p>These are the companies that joined our mission:</p>
+      </div>
+    </ScrollableAnchor>
     <style jsx>{`
     
       * {

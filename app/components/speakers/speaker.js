@@ -1,8 +1,7 @@
-import { styles, mediaQueries } from '../../constants'
+import { mediaQueries } from '../../constants'
 
 const Speaker = props => (
   <div style={{ marginLeft: 'auto', marginRight: 'auto' }}>
-    <Style />
     <div className="speaker-sec">
       <div className="speaker-info-box">
         <div className="speaker-img">
@@ -24,11 +23,7 @@ const Speaker = props => (
         <h6>{props.data.position}<br />{props.data.company}</h6>
       </div>
     </div>
-  </div>
-)
-
-const Style = () => (
-  <style jsx>{`
+    <style jsx>{`
     .speaker-sec {
       text-align: center;
     }
@@ -136,6 +131,7 @@ const Style = () => (
     }
     
   `}</style>
+  </div>
 )
 
 module.exports = Speaker

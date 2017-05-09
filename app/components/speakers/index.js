@@ -1,48 +1,47 @@
-import Section from '../components/common/section'
-import { styles, mediaQueries } from '../constants'
-import Speaker from '../components/speaker/speaker'
-import speakerList from '../data/speakers'
+import ScrollableAnchor from 'react-scrollable-anchor'
+import Section from '../../components/common/section'
+import { styles, mediaQueries } from '../../constants'
+import speakers from '../../data/speakers'
+import Speaker from './speaker'
 
 let speakersHTML = []
 let speakersRow = []
-for (let i = 0; i < speakerList.length; i++) {
+
+speakers.map((speaker, key) => {
   speakersRow.push(
-    <div className="speaker-box">
-      <Speaker data={speakerList[i]} />
+    <div key={key.toString()} className="speaker-box">
+      <Speaker data={speaker} />
     </div>
   )
 
-  if (speakersRow.length == 4 || i == speakerList.length - 1) {
-    let classes = 'row'
-    if (speakersRow.length < 4) {
-      classes = 'row, a-third'
-    }
+  if (speakersRow.length === 4 || key === speakers.length - 1) {
     speakersHTML.push(
-      <div className={classes}>
+      <div key={key.toString()} className={`row ${speakersRow.length < 4 ? '': 'a-third'}`}>
         {speakersRow}
       </div>
     )
     speakersRow = []
   }
-}
+})
+
 const Speakers = () => (
   <Section>
-    <div className="section-padding">
-      <div className="row, section-header">
-        <h2>Our Heroes</h2>
-        <p>
-          The speakers that joined our mission are experts recognized by global
-          communities. They are people who define our working environment every day.
-          {' '}
-          Most of them are for the first time in Romania and they’re really looking
-          {' '}
-          forward to our community event!
-        </p>
+    <ScrollableAnchor id={'speakers'}>
+      <div className="section-padding">
+        <div className="row, section-header">
+          <h2>Our Heroes</h2>
+          <p>
+            The speakers that joined our mission are experts recognized by global
+            communities. They are people who define our working environment every day.
+            {' '}
+            Most of them are for the first time in Romania and they’re really looking
+            {' '}
+            forward to our community event!
+          </p>
+        </div>
+        {speakersHTML}
       </div>
-
-      {speakersHTML}
-    </div>
-
+    </ScrollableAnchor>
     <style jsx>{`
 
       h2 {

@@ -28,7 +28,7 @@ module.exports = [
     label: 'venue'
   },
   {
-    url: '#sponsors',
+    url: '#contact',
     label: 'contact'
   }
 ]
