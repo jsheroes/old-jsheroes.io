@@ -19,10 +19,11 @@ export default class Nav extends Component {
   }
 
   handleScroll() {
-    const scrollPosition = window.pageYOffset || document.documentElement.scrollTop
+    const scrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop
     if (scrollPosition > 50 && !this.state.smallNav) {
       this.setState({ smallNav: true })
-    } else if(scrollPosition < 50 && this.state.smallNav){
+    } else if (scrollPosition < 50 && this.state.smallNav) {
       this.setState({ smallNav: false })
     }
   }
@@ -37,8 +38,11 @@ export default class Nav extends Component {
 
   render() {
     return (
-      <nav style={this.props.style} className={this.state.smallNav ? 'smallNav': 'bigNav'}>
-        <img src="static/img/website_logo.png"/>
+      <nav
+        style={this.props.style}
+        className={this.state.smallNav ? 'smallNav' : 'bigNav'}
+      >
+        <img src="static/img/website_logo.png" />
         <ul>
           {menuItems.map((item, key) => {
             return (

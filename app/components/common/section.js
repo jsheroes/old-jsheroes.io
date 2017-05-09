@@ -1,6 +1,6 @@
 import { style, mediaQueries } from '../../constants'
 
-const Section = (props) => (
+const Section = props => (
   <section style={props.section.style}>
     <div style={props.container.style}>
       <style jsx>{`
@@ -36,11 +36,11 @@ const Section = (props) => (
 
 Section.defaultProps = {
   section: {
-    style: {},
+    style: {}
   },
   container: {
-    style: {},
-  },
-};
+    style: {}
+  }
+}
 
 module.exports = Section

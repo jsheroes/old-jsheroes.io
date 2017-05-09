@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Nav from '../components/nav'
 import Hero from '../components/hero'
 import Footer from '../components/footer'
-import Speakers from '../containers/speakers'
 
 class Layout extends Component {
   constructor(props) {
@@ -11,7 +10,7 @@ class Layout extends Component {
   }
 
   handleWindowSizeChange() {
-    // 
+    //
   }
 
   componentDidMount() {
@@ -40,9 +39,6 @@ class Layout extends Component {
         <Nav />
         <Hero />
         {this.props.children}
-
-        { /* the Speaker component will have to be rendered inside another container. Just added it here to test that it works */}
-        <Speakers />
         <Footer />
       </div>
     )

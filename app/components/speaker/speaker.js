@@ -1,26 +1,29 @@
 import { styles, mediaQueries } from '../../constants'
 
-const Speaker = (props) => (
-  <div style={{marginLeft: 'auto', marginRight: 'auto'}}>
+const Speaker = props => (
+  <div style={{ marginLeft: 'auto', marginRight: 'auto' }}>
     <Style />
-      <div className="speaker-sec">
-        <div className="speaker-info-box">
-          <div className="speaker-img">
-            {' '}
-            <img src={"static/img/speakers/" + props.data.img} alt={props.data.name} />
-            {' '}
-          </div>
-          <div className="speaker-hover">
-            <div className="speaker-more-cta text-center">
-              <span>find out more</span>
-            </div>
-          </div>
+    <div className="speaker-sec">
+      <div className="speaker-info-box">
+        <div className="speaker-img">
+          {' '}
+          <img
+            src={'static/img/speakers/' + props.data.img}
+            alt={props.data.name}
+          />
+          {' '}
         </div>
-        <div className="speaker-info">
-          <h5 className="text-blue">{props.data.full_name}</h5>
-          <h6>{props.data.position}<br />{props.data.company}</h6>
+        <div className="speaker-hover">
+          <div className="speaker-more-cta text-center">
+            <span>find out more</span>
+          </div>
         </div>
       </div>
+      <div className="speaker-info">
+        <h5 className="text-blue">{props.data.full_name}</h5>
+        <h6>{props.data.position}<br />{props.data.company}</h6>
+      </div>
+    </div>
   </div>
 )
 
