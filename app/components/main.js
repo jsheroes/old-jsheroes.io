@@ -47,7 +47,7 @@ class Layout extends Component {
 
 const Style = () => (
   <style jsx>{`
-
+  
     html, body, ul, h1, h2, h3 {
       border: 0;
       margin: 0;

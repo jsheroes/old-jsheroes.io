@@ -1,29 +1,55 @@
 import Section from '../components/common/section'
 import { styles, mediaQueries } from '../constants'
 
-const Mission = () => (
-  <Section section={{ style: { backgroundColor: styles.mainColor6 } }}>
+const Sponsors = () => (
+  <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
     <div>
-      <h2>Our Mission</h2>
+      <h2>Our Sponsors</h2>
       <p>
-        We believe that the <strong>community model</strong> is the best
-        environment for learning, so part of our mission is to inspire and help
-        other communities. We’ll <strong>publish all data</strong> about this
-        conference, in full transparency. This way, whenever the next
-        javascripters want to <strong>take over</strong> this event, they
-        can <strong>build on</strong> our knowledge and the event’s brand.
-        Our vision is for a <strong>connected global community</strong>, and
-        for this we’ve designed the event to be JSHeroes, <strong>
-          the first of
-          a series
-        </strong> of Open-Source Community Events by <strong>
-          JavaScript
-          Communities worldwide
-        </strong>.
+        If you wish to participate as a sponsor to our event contact us &nbsp;
+        <a className="mail-to" href="mailto: contact@jsheroes.io" target="_top">
+          <strong>welcome@jsheroes.io</strong>
+        </a>
       </p>
+      <p>These are the companies that joined our mission:</p>
     </div>
 
     <style jsx>{`
+    
+      * {
+        box-sizing: border-box;
+      }
+      
+      :after,
+      :before {
+        box-sizing: border-box;
+      }
+    
+      .row {
+        margin-right: -15px;
+        margin-left: -15px;
+        min-height: 1px;
+      }
+
+      .cf:before,
+      .cf:after,
+      .row:before,
+      .row:after {
+        content: " ";
+        display: table;
+      }
+      
+      .cf:after,
+      .row:after {
+        clear: both;
+      }
+          
+      .mail-to {
+        text-transform: none;
+        color: ${styles.mainColor1};
+        font-weight: 800;
+      }
+      
       div {
         padding: 140px 0;
       }
@@ -31,15 +57,15 @@ const Mission = () => (
       h2 {
         text-align: center;
         font-size: 54px;
-        color: ${styles.mainColor3};
+        color: ${styles.mainColor2};
         font-weight: 700;
         margin: 0 auto 30px;
       }
 
       p {
-        margin: 0 0 40px;
+        margin: 0 0 10px;
         font-size: 18px;
-        color: ${styles.mainColor3};
+        color: ${styles.mainColor7};
         line-height: 32px;
         font-weight: 300;
         text-align: center;
@@ -80,4 +106,4 @@ const Mission = () => (
   </Section>
 )
 
-module.exports = Mission
+module.exports = Sponsors
