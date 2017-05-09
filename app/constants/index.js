@@ -4,7 +4,8 @@ module.exports = {
     mainColor2: '#161616', // almost black
     mainColor3: '#fff', // white
     mainColor4: '#222', // grey background
-    mainColor5: '#228dcb' // blue
+    mainColor5: '#228dcb', // blue
+    mainColor6: '#0098FF', // blue light
   },
   mediaQueries: {
     XL: '1200px',

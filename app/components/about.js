@@ -2,8 +2,7 @@ import Section from '../components/common/section'
 import { styles, mediaQueries } from '../constants'
 
 const About = () => (
-
-  <Section>
+  <Section section={{style: { backgroundColor: styles.mainColor3 }}}>
     <div>
       <h2>About Our Event</h2>
       <p>
@@ -15,6 +14,7 @@ const About = () => (
         </strong>and we’ve chosen a venue that allows a crowd of up
         to <strong>500 attendees</strong>.
       </p>
+      
       <p>
         We kick-started the Cluj JavaScripters community in August 2015.
         Since then we’ve grown to <strong>900+ members</strong> and formed
@@ -27,6 +27,7 @@ const About = () => (
         entire conference track for CodeCamp. What can we say, it was a
         full-house track and it was brilliant!
       </p>
+      
       <p>
         JSHeroes is one of our dreams and the high point of an active
         community; we’re truly engaged to see it come true. <strong>
@@ -41,6 +42,7 @@ const About = () => (
         </strong>.
       </p>
     </div>
+    
     <style jsx>{`
       div {
         padding: 140px 0;
@@ -48,7 +50,7 @@ const About = () => (
 
       h2 {
         text-align: center;
-        font-size: 52px;
+        font-size: 54px;
         color: ${styles.mainColor4};
         font-weight: 700;
         margin: 0 auto 30px;

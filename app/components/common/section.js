@@ -27,7 +27,7 @@ const Section = (props) => (
             width: 1140px;
           }
         }
-
+        
       `}</style>
       {props.children}
     </div>
