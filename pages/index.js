@@ -3,6 +3,7 @@ import About from '../app/components/about'
 import Speakers from '../app/components/speakers'
 import Mission from '../app/components/mission'
 import Sponsors from '../app/components/sponsors'
+import Partners from '../app/components/partners'
 
 export default () => (
   <CompMain>
@@ -10,5 +11,6 @@ export default () => (
     <Speakers />
     <Mission />
     <Sponsors />
+    <Partners />
   </CompMain>
 )
