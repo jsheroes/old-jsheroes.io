@@ -1,132 +1,162 @@
+import ScrollableAnchor from 'react-scrollable-anchor'
 import Section from '../components/common/section'
 import { styles, mediaQueries } from '../constants'
 
 const Sponsors = () => (
   <Section section={{ style: { backgroundColor: styles.mainColor3 } }}>
-    <div>
-      <h2>Our Sponsors</h2>
-      <p>
-        If you wish to participate as a sponsor to our event contact us&nbsp;
-        <a className="mail-to" href="mailto: contact@jsheroes.io" target="_top">
-          <strong>welcome@jsheroes.io</strong>
-        </a>
-      </p>
-      <p>These are the companies that joined our mission:</p>
-
-      <ul className="sponsors-list">
-        <li>
-          <a href="https://www.evozon.com/" target="_blank">
-            <img
-              src="static/img/sponsors/evozon.png"
-              alt="evozon"
-              title="Evozon"
-              className="logo-sponsor"
-            />
+    <ScrollableAnchor id={'sponsors'}>
+      <div>
+        <h2>Our Sponsors</h2>
+        <p>
+          If you wish to participate as a sponsor to our event contact us&nbsp;
+          <a className="mail-to" href="mailto: contact@jsheroes.io" target="_top">
+            <strong>welcome@jsheroes.io</strong>
           </a>
-        </li>
-
-        <li>
-          <a href="https://www.fortech.ro/" target="_blank">
-            <img
-              src="static/img/sponsors/fortech.png"
-              alt="fortech"
-              title="Fortech"
-              className="logo-sponsor"
-            />
-          </a>
-        </li>
-        <li>
-          <a href="https://www.scoalainformala.ro/" target="_blank">
-            <img
-              src="static/img/sponsors/scoala-informala.jpg"
-              alt="scoala informala"
-              title="Informal School of IT"
-              className="logo-sponsor"
-            />
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="http://www.nielsen.com/eu/en/solutions/capabilities/nielsen-marketing-cloud.html"
-            target="_blank"
-          >
-            <img
-              src="static/img/sponsors/nielsen-mc.png"
-              alt="nielsen"
-              title="Nielsen Marketing Cloud"
-              className="logo-sponsor"
-            />
-          </a>
-        </li>
-
-        <li>
-          <a href="https://developers.google.com/" target="_blank">
-            <img
-              src="static/img/sponsors/google-dev-exp.png"
-              alt="Google Developers"
-              title="Google Developers"
-              className="logo-sponsor"
-            />
-          </a>
-        </li>
-
-        <li>
-          <a href="https://moqups.com/" target="_blank">
-            <img
-              src="static/img/sponsors/moqups.jpg"
-              alt="Moqups"
-              title="Moqups"
-              className="logo-sponsor"
-            />
-          </a>
-        </li>
-
-        <li>
-          <a href="https://catalysts.cc/" target="_blank">
-            <img
-              src="static/img/sponsors/catalysts.jpg"
-              alt="Catalyst"
-              title="Catalyst"
-              className="logo-sponsor"
-            />
-          </a>
-        </li>
-
-        <li>
-          <a href="https://www.logmeininc.com/" target="_blank">
-            <img
-              src="static/img/sponsors/log-me-in.png"
-              alt="LogMeIn"
-              title="LogMeIn"
-              className="logo-sponsor"
-            />
-          </a>
-        </li>
-
-        <li>
-          <a href="https://www.connatix.com/" target="_blank">
-            <img
-              src="static/img/sponsors/connatix.png"
-              alt="Connatix"
-              title="Connatix"
-              className="logo-sponsor"
-            />
-          </a>
-        </li>
-
-        <li>
-          <a href="https://www.accenture.com/" target="_blank">
-            <img
-              src="static/img/sponsors/accenture.png"
-              alt="Accenture"
-              title="Accenture"
-              className="logo-sponsor"
-            />
-          </a>
-        </li>
-      </ul>
-    </div>
+        </p>
+        <p>These are the companies that joined our mission:</p>
+      
+        <ul className="sponsors-list">
+          <li>
+            <a
+              href="https://www.evozon.com/"
+              target="_blank"
+            >
+              <img
+                src="static/img/sponsors/evozon.png"
+                alt="evozon"
+                title="Evozon"
+                className="logo-sponsor"
+              />
+            </a>
+          </li>
+          
+          <li>
+            <a
+              href="https://www.fortech.ro/"
+              target="_blank"
+            >
+              <img
+                src="static/img/sponsors/fortech.png"
+                alt="fortech"
+                title="Fortech"
+                className="logo-sponsor"
+              />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.scoalainformala.ro/"
+              target="_blank"
+            >
+              <img
+                src="static/img/sponsors/scoala-informala.jpg"
+                alt="scoala informala"
+                title="Informal School of IT"
+                className="logo-sponsor"
+              />
+            </a>
+          </li>
+                  
+          <li>
+            <a
+              href="http://www.nielsen.com/eu/en/solutions/capabilities/nielsen-marketing-cloud.html"
+              target="_blank"
+            >
+              <img
+                src="static/img/sponsors/nielsen-mc.png"
+                alt="nielsen"
+                title="Nielsen Marketing Cloud"
+                className="logo-sponsor"
+              />
+            </a>
+          </li>
+          
+          <li>
+            <a
+              href="https://developers.google.com/"
+              target="_blank"
+            >
+              <img
+                src="static/img/sponsors/google-dev-exp.png"
+                alt="Google Developers"
+                title="Google Developers"
+                className="logo-sponsor"
+              />
+            </a>
+          </li>
+          
+          <li>
+            <a
+              href="https://moqups.com/"
+              target="_blank"
+            >
+              <img
+                src="static/img/sponsors/moqups.jpg"
+                alt="Moqups"
+                title="Moqups"
+                className="logo-sponsor"
+              />
+            </a>
+          </li>
+                  
+          <li>
+            <a
+              href="https://catalysts.cc/"
+              target="_blank"
+            >
+              <img
+                src="static/img/sponsors/catalysts.jpg"
+                alt="Catalyst"
+                title="Catalyst"
+                className="logo-sponsor"
+              />
+            </a>
+          </li>
+          
+          <li>
+            <a
+              href="https://www.logmeininc.com/"
+              target="_blank"
+            >
+              <img
+                src="static/img/sponsors/log-me-in.png"
+                alt="LogMeIn"
+                title="LogMeIn"
+                className="logo-sponsor"
+              />
+            </a>
+          </li>
+          
+          <li>
+            <a
+              href="https://www.connatix.com/"
+              target="_blank"
+            >
+              <img
+                src="static/img/sponsors/connatix.png"
+                alt="Connatix"
+                title="Connatix"
+                className="logo-sponsor"
+              />
+            </a>
+          </li>
+          
+          <li>
+            <a
+              href="https://www.accenture.com/"
+              target="_blank"
+            >
+              <img
+                src="static/img/sponsors/accenture.png"
+                alt="Accenture"
+                title="Accenture"
+                className="logo-sponsor"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </ScrollableAnchor>
 
     <style jsx>{`
 
@@ -247,15 +277,13 @@ const Sponsors = () => (
           line-height: 28px;
           margin-bottom: 20px;
         }
+        
         li {      
           margin-bottom: 31px;
           margin-left: 12px;
           margin-right: 12px;
         }
-        
       }
-      
-      
     `}</style>
   </Section>
 )

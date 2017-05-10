@@ -18,8 +18,10 @@
     "express": "^4.15.2",
     "isomorphic-unfetch": "^1.0.0",
     "next": "^2.3.0",
+    "prop-types": "^15.5.8",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-scrollable-anchor": "^0.4.2"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
