@@ -16,7 +16,10 @@ speakers.map((speaker, key) => {
 
   if (speakersRow.length === 4 || key === speakers.length - 1) {
     speakersHTML.push(
-      <div key={key.toString()} className={`row ${speakersRow.length < 4 ? '': 'a-third'}`}>
+      <div
+        key={key.toString()}
+        className={`row ${speakersRow.length < 4 ? '' : 'a-third'}`}
+      >
         {speakersRow}
       </div>
     )

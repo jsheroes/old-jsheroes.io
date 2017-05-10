@@ -1,13 +1,13 @@
-import { configureAnchors } from 'react-scrollable-anchor' 
+import { configureAnchors } from 'react-scrollable-anchor'
 import Head from 'next/head'
 import Nav from '../components/nav'
 import Hero from '../components/hero'
 import Footer from '../components/footer'
 
-configureAnchors({ offset: -60, scrollDuration: 1000})
+configureAnchors({ offset: -60, scrollDuration: 1000 })
 const Main = props => (
   <div>
-    { /* we're using next/head to place this styles in the head tag */ }
+    {/* we're using next/head to place this styles in the head tag */}
     <Head>
       <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"

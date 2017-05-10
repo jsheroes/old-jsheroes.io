@@ -7,9 +7,9 @@ export default class Nav extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      height: 100,      
+      height: 100,
       smallNav: false,
-      currentHash: '',
+      currentHash: ''
     }
 
     this.handleScroll = this.handleScroll.bind(this)
@@ -37,7 +37,7 @@ export default class Nav extends Component {
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
-    window.removeEventListener('hashchange', this.handleHashChange)    
+    window.removeEventListener('hashchange', this.handleHashChange)
   }
 
   render() {
@@ -49,7 +49,9 @@ export default class Nav extends Component {
         <img src="static/img/website_logo.png" />
         <ul>
           {menuItems.map((item, key) => {
-            const active = `#${this.state.currentHash}` === item.url ? 'active': ''
+            const active = `#${this.state.currentHash}` === item.url
+              ? 'active'
+              : ''
             return (
               <li key={key}>
                 <a href={item.url} className={active}>{item.label}</a>
