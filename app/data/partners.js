@@ -38,5 +38,15 @@ module.exports = [
     title: 'Onyx Beacon',
     img: 'logo_onyx_beacon.png',
     href: 'http://www.onyxbeacon.com/'
+  },
+  {
+    title: 'Today Software Magazine',
+    img: 'logo_tsm.jpg',
+    href: 'https://www.todaysoftmag.com/'
+  },
+  {
+    title: 'IT days',
+    img: 'logo_it_days.png',
+    href: 'http://itdays.ro/'
   }
 ]

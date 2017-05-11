@@ -43,6 +43,10 @@ const Community = props => (
       }
 
       @media (max-width: ${mediaQueries.L}) and (min-width: ${mediaQueries.S}) {
+        img {
+          width: 95px;
+        }
+        
         li {      
           margin-bottom: 25px;
           margin-left: 30px;
@@ -51,6 +55,10 @@ const Community = props => (
       }
 
       @media only screen and (max-width: ${mediaQueries.S}) {
+        img {
+          width: 95px;
+        }
+        
         li {      
           margin-bottom: 31px;
           margin-left: 12px;

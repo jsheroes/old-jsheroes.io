@@ -12,13 +12,13 @@ const Section = props => (
         
         @media (min-width: ${mediaQueries.S}) {
           div {
-            width: 738px;
+            width: 720px;
           }
         }
         
         @media (min-width: ${mediaQueries.L}) {
           div {
-            width: 962px;
+            width: 960px;
           }
         }
         

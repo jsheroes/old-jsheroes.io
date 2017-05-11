@@ -93,24 +93,21 @@ const Communities = () => (
       }
 
       ul {
-        margin-top: 35px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 35px auto 50px;
         text-align: center;
-        margin-bottom: 60px;
       }
       
       .be-a-host,
       .be-a-guest,
       .be-a-host:hover,
       .be-a-guest:hover {
-        color: #228dcb;
-        fill: #228dcb;
+        color: ${styles.mainColor5};
+        fill: ${styles.mainColor5};
       }
       
       @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
         div {
-          padding: 90px 0 0;
+          padding: 90px 0 90px;
         }
         
         h2 {
@@ -125,7 +122,7 @@ const Communities = () => (
       
       @media (max-width: ${mediaQueries.L}) and (min-width: ${mediaQueries.S}) {
         div {
-          padding: 70px 0 0;
+          padding: 60px 0 80px;
         }
         
         h2 {
@@ -136,11 +133,15 @@ const Communities = () => (
           font-size: 18px;
           line-height: 32px;
         }
+        
+        ul {
+          margin-top: 30px;
+        }
       }
 
       @media only screen and (max-width: ${mediaQueries.S}) {
         div {
-          padding: 80px 0 0;
+          padding: 55px 0 80px;
         }
         
         h2 {
