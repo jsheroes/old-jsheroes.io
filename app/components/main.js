@@ -9,6 +9,9 @@ const Main = props => (
   <div>
     {/* we're using next/head to place this styles in the head tag */}
     <Head>
+      <title>JSHeroes 2017</title>
+      <link href="static/img/favicon.png" rel="shortcut icon" />
+
       <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900"
         rel="stylesheet"

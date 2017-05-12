@@ -12,5 +12,6 @@ module.exports = {
     XL: '1200px',
     L: '992px',
     S: '768px'
-  }
+  },
+  JSHeroesMapApiKey: 'AIzaSyAswFS24FiMHSvmwbU1ctvMSuQ3vb6D8l8'
 }

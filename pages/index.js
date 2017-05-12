@@ -5,6 +5,7 @@ import Mission from '../app/components/mission'
 import Sponsors from '../app/components/sponsors'
 import Partners from '../app/components/partners'
 import Communities from '../app/components/communities'
+import Venue from '../app/components/venue'
 
 export default () => (
   <CompMain>
@@ -14,5 +15,6 @@ export default () => (
     <Sponsors />
     <Partners />
     <Communities />
+    <Venue />
   </CompMain>
 )
