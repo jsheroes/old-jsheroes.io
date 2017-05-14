@@ -48,5 +48,10 @@ module.exports = [
     title: 'Accenture',
     img: 'logo_accenture.png',
     href: 'https://www.accenture.com/'
+  },
+  {
+    title: 'Spyhce',
+    img: 'logo_spyhce.png',
+    href: 'http://www.spyhce.com/'
   }
 ]

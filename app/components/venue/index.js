@@ -1,7 +1,7 @@
 import ScrollableAnchor from 'react-scrollable-anchor'
-import Section from '../../components/common/section'
 import GoogleMap from './google.map'
 
+import Section from '../../components/common/section'
 import { styles, mediaQueries } from '../../constants'
 
 const Venue = () => (

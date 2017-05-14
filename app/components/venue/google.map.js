@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
-import MapPin from './map.pin'
+
+import MapPin from './google.map.pin'
 import { JSHeroesMapApiKey, mediaQueries } from '../../constants'
 
 export default class GoogleMap extends Component {

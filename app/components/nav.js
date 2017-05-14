@@ -42,41 +42,53 @@ export default class Nav extends Component {
 
   render() {
     return (
-      <nav
+      <div
         style={this.props.style}
         className={this.state.smallNav ? 'smallNav' : 'bigNav'}
       >
-        <img src="static/img/website_logo.png" />
-        <ul>
-          {menuItems.map((item, key) => {
-            const active = `#${this.state.currentHash}` === item.url
-              ? 'active'
-              : ''
-            return (
-              <li key={key}>
-                <a href={item.url} className={active}>{item.label}</a>
-              </li>
-            )
-          })}
-        </ul>
+        <nav>
+          <img src="static/img/website_logo.png" />
+          <ul>
+            {menuItems.map((item, key) => {
+              const active = `#${this.state.currentHash}` === item.url
+                ? 'active'
+                : ''
+              return (
+                <li key={key}>
+                  <a href={item.url} className={active}>{item.label}</a>
+                </li>
+              )
+            })}
+          </ul>
+        </nav>
+
         <style jsx>{`
+          div {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background-color: rgba(0, 0, 0, ${initialOpacity});
+            line-height: 100px;
+            -webkit-transition: line-height .3s ease-out;
+            -moz-transition: line-height .3s ease-out;
+            transition: line-height .3s ease-out;
+          }
+          
+          nav {
+            padding: 0 15px;
+            margin: 0 auto;
+          }
 
           ul {
             display: inline-block;
           }
 
-          nav {
-            background-color: rgba(0, 0, 0, ${initialOpacity});
-            position: fixed;
-            top: 0;
-            z-index: 1;
-            width: 100%;
-          }
 
           li {
             margin: 0 15px;
             display: inline-block;
-            line-height: 100px;
           }
 
           a {
@@ -91,19 +103,27 @@ export default class Nav extends Component {
             vertical-align: middle;
             padding-bottom: 12px;
             transform: scale(0.8);
+            transition: transform .3s linear;
           }
 
           .smallNav {
-            animation: nav 0.5s forwards;
+            line-height: 60px;
+            animation: smallNav 0.3s forwards;
           }
+          
+          .smallNav nav img {
+            transform: scale(0.5);
+          }
+          
           .bigNav {
-            animation: bigNav 0.5s forwards;
+            animation: bigNav 0.3s forwards;
           }
+          
           .active {
             color: ${styles.mainColor6}
           }
 
-          @keyframes nav {
+          @keyframes smallNav {
             from { background-color: rgba(0, 0, 0, ${initialOpacity}); }
             to { background-color: rgba(0, 0, 0, 1); }
           }
@@ -141,9 +161,26 @@ export default class Nav extends Component {
             }
           }
 
-        }
+          @media (min-width: ${mediaQueries.S}) {
+            nav {
+              width: 720px;
+            }
+          }
+          
+          @media (min-width: ${mediaQueries.L}) {
+            nav {
+              width: 960px;
+            }
+          }
+          
+          @media (min-width: ${mediaQueries.XL}) {
+            nav {
+              width: 1140px;
+            }
+          }
+        
         `}</style>
-      </nav>
+      </div>
     )
   }
 }

@@ -40,13 +40,13 @@ module.exports = [
     href: 'http://www.onyxbeacon.com/'
   },
   {
-    title: 'Today Software Magazine',
-    img: 'logo_tsm.jpg',
-    href: 'https://www.todaysoftmag.com/'
-  },
-  {
     title: 'IT days',
     img: 'logo_it_days.png',
     href: 'http://itdays.ro/'
+  },
+  {
+    title: 'Today Software Magazine',
+    img: 'logo_tsm.jpg',
+    href: 'https://www.todaysoftmag.com/'
   }
 ]

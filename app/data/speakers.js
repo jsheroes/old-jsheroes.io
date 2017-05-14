@@ -105,11 +105,11 @@ module.exports = [
     img: 'chereches.png'
   },
   {
-    name: 'pavithra',
-    full_name: 'Pavithra Kodmad',
-    position: 'UI Engineer',
-    company: 'Flipkart.com',
-    img: 'pavithra.png'
+    name: 'vladimir',
+    full_name: 'Vladimir Porton',
+    position: 'Senior React & React Native Developer',
+    company: '500Tech',
+    img: 'vladimir_porton.png'
   },
   {
     name: 'filip',
@@ -131,5 +131,12 @@ module.exports = [
     position: 'Software Architect',
     company: 'Evozon',
     img: 'ronodi.png'
+  },
+  {
+    name: 'pavithra',
+    full_name: 'Pavithra Kodmad',
+    position: 'UI Engineer',
+    company: 'Flipkart.com',
+    img: 'pavithra.png'
   }
 ]

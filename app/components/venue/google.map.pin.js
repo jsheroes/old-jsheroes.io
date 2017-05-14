@@ -22,7 +22,7 @@ export default class MapPin extends Component {
     return (
       <div onClick={this.toggleLabel}>
         <div
-          className={`map-pin-adress ${!this.state.showPinLabel ? 'hide' : ''}`}
+          className={`map-pin-loc ${this.state.showPinLabel ? 'mpl-show' : ''}`}
         >
           <p>Trifoiului Street number 3, Cluj-Napoca, Romania</p>
           <p><strong>Grand Hotel Italia</strong></p>
@@ -30,9 +30,10 @@ export default class MapPin extends Component {
         <img src="static/img/js_heroes_pin.png" alt="The Map Pin" />
 
         <style jsx>{`
-          .map-pin-adress {
+          .map-pin-loc {
+            display: none;
             position: absolute;
-            left: -100px;
+            left: -85px;
             top: -70px;
             border-radius: 4px;
             background-color: ${styles.mainColor3};
@@ -43,11 +44,11 @@ export default class MapPin extends Component {
             text-align: center;
           }
           
-          .map-pin-adress:after {
+          .map-pin-loc:after {
             content: "";
             position: absolute;
             top: 48px;
-            left: 130px;
+            left: 115px;
             width: 2px;
             height: 20px;
             border-top: 20px solid ${styles.mainColor3};
@@ -55,8 +56,8 @@ export default class MapPin extends Component {
             border-left: 20px solid transparent;
           }
 
-          .hide {
-            display: none;
+          .mpl-show {
+            display: block;
           }
           
           p {
