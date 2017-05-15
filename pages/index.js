@@ -6,6 +6,7 @@ import Sponsors from '../app/components/sponsors'
 import Partners from '../app/components/partners'
 import Communities from '../app/components/communities'
 import Venue from '../app/components/venue'
+import Contact from '../app/components/contact'
 
 export default () => (
   <CompMain>
@@ -16,5 +17,6 @@ export default () => (
     <Partners />
     <Communities />
     <Venue />
+    <Contact />
   </CompMain>
 )
