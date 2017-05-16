@@ -2,7 +2,7 @@ import { style, mediaQueries } from '../../constants'
 
 const Section = props => (
   <section style={props.section.style}>
-    <div style={props.container.style}>
+    <div style={props.mainContainer.style}>
       <style jsx>{`
       
         div {
@@ -38,7 +38,7 @@ Section.defaultProps = {
   section: {
     style: {}
   },
-  container: {
+  mainContainer: {
     style: {}
   }
 }

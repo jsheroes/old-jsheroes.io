@@ -1,7 +1,6 @@
 import { configureAnchors } from 'react-scrollable-anchor'
 import Head from 'next/head'
 import Nav from '../components/nav'
-import Hero from '../components/hero'
 import Footer from '../components/footer'
 
 configureAnchors({ offset: -60, scrollDuration: 1000 })
@@ -21,10 +20,11 @@ const Main = props => (
         rel="stylesheet"
       />
     </Head>
+
     <Nav />
-    <Hero />
     {props.children}
     <Footer />
+
     <style jsx global>{`
 
       html, body, ul, h1, h2, h3 {

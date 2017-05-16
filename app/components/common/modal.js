@@ -1,16 +1,27 @@
 import { style, mediaQueries } from '../../constants'
 
-const Modal = (props) => (
+const Modal = props => (
   <div>
     <Style />
-    <div className="modal-backdrop fade in"></div>
-    <div id="modal_body" className="modal fade in" role="dialog" style={{display: 'block', paddingRight: '17px'}}>
-      <div className="modal-dialog"> 
-          <div className="modal-close-button" data-dismiss="modal" aria-label="Close"><i className="fa fa-window-close-o"></i></div>
-    
-          <div className="modal-content padding_4x4_40">
-            {props.children}
-          </div>
+    <div className="modal-backdrop fade in" />
+    <div
+      id="modal_body"
+      className="modal fade in"
+      role="dialog"
+      style={{ display: 'block', paddingRight: '17px' }}
+    >
+      <div className="modal-dialog">
+        <div
+          className="modal-close-button"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <i className="fa fa-window-close-o" />
+        </div>
+
+        <div className="modal-content padding_4x4_40">
+          {props.children}
+        </div>
       </div>
     </div>
   </div>
