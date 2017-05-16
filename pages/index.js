@@ -1,4 +1,5 @@
 import CompMain from '../app/components/main'
+import Hero from '../app/components/hero'
 import About from '../app/components/about'
 import Speakers from '../app/components/speakers'
 import Mission from '../app/components/mission'
@@ -10,6 +11,7 @@ import Contact from '../app/components/contact'
 
 export default () => (
   <CompMain>
+    <Hero />
     <About />
     <Speakers />
     <Mission />
