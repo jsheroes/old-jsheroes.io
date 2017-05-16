@@ -4,42 +4,66 @@ module.exports = [
     full_name: 'Guillermo Rauch',
     position: 'Founder and CEO',
     company: 'Zeit',
-    img: 'GuillermoRauch.jpg'
+    img: 'GuillermoRauch.jpg',
+    twitter: 'https://twitter.com/rauchg',
+    github: 'https://github.com/rauchg',
+    website: 'https://rauchg.com/',
+    description: '<p>Guillermo is the founder of <a href="https://zeit.co/" target="_blank">zeit.co</a>, whose mission is to make cloud deployment simple, global and real time. He founded two startups previously: LearnBoost and CloudUp. He`s the creator of several popular Node.JS open source libraries like <a href="https://socket.io/" target="_blank">socket.io</a>, <a href="http://mongoosejs.com/" target="_blank">mongoose</a> and <a href="https://github.com/rauchg/slackin" target="_blank">slackin</a>. Prior to Node.JS, he was a core developer of the <a href="https://mootools.net/" target="_blank">MooTools</a> frontend toolkit. He’s a JSConf.ar curator, open source enthusiast and blogger</p>'
   },
   {
     name: 'liran',
     full_name: 'Liran Tal',
     position: 'Engineering Manager',
     company: 'Marketing Cloud, Nielsen',
-    img: 'liran.png'
+    img: 'liran.png',
+    twitter: 'https://twitter.com/liran_tal',
+    github: 'https://github.com/lirantal',
+    website: 'https://medium.com/@liran.tal',
+    description: '<p>Liran is leading the core team for the MEAN.js JavaScript framework. He recently published Essential Node.js Security and authored other books in Agile, and Web development. Passionate about Open Source since an early age, he is continuously contributing to many projects on GitHub in Node.js, JavaScript, Docker, and Security.</p><p>Being an avid supporter and contributor to the open source movement, in 2007 Liran has redefined network RADIUS management by establishing daloRADIUS, a world-recognized and industry-leading <br><a href="http://www.daloradius.com" class="text-blue" target="_blank">open source project</a>.</p>'
   },
   {
     name: 'martin',
     full_name: 'Martin Splitt',
     position: 'Senior software engineer',
     company: 'Archilogic',
-    img: 'martin.jpg'
+    img: 'martin.jpg',
+    twitter: 'https://twitter.com/g33konaut',
+    github: 'https://github.com/avgp',
+    website: 'http://50linesofco.de',
+    description: '<p>Open web &amp; open source cheerleader, Google Developer Expert for web technologies, W3C contributor, O\'Reilly Workshop instructor, book author and a good guy with a loud laugh. </p>'
   },
   {
     name: 'gautam',
     full_name: 'Gautam Arora',
     position: 'Developer Evangelist',
     company: 'Conde Nast',
-    img: 'gautam.jpeg'
+    img: 'gautam.jpeg',
+    twitter: 'https://twitter.com/gautam',
+    github: 'https://github.com/gautamarora',
+    website: 'http://www.gautamarora.com/',
+    description: '<p>Gautam is a Developer Evangelist at <a href="http://www.condenast.com/" target="_blank">Conde Nast</a>, an organizer of New York JavaScript where he runs NodeSchool NYC, and a self-published author at <a href="http://fullstackjs.com/" target="_blank">FullStack JavaScript</a>.</p>'
   },
   {
     name: 'mark',
     full_name: 'Mark Dalgleish',
     position: 'DesignOps Lead',
     company: 'SEEK',
-    img: 'mark.jpg'
+    img: 'mark.jpg',
+    twitter: 'https://twitter.com/markdalgleish',
+    github: 'https://github.com/markdalgleish',
+    website: '',
+    description: '<p>Mark Dalgleish is the co-creator of CSS Modules, lead organiser of MelbJS, and DesignOps Lead at SEEK, Australia\'s leading job site. Having got his start with HTML and UI design at a young age, Mark has since developed a love of open source and software engineering but always as a means to creating elegant, usable experiences.</p>'
   },
   {
     name: 'calinescu',
     full_name: 'Dan Călinescu',
     position: 'Knowledge Manager',
     company: 'Evozon',
-    img: 'calinescu.jpg'
+    img: 'calinescu.jpg',
+    twitter: 'https://twitter.com/idancali',
+    github: 'https://github.com/idancali',
+    website: 'https://medium.com/@idancali',
+    description: '<p>Developer, writer, educator and father, on a mission to contribute to a future where technology serves humanity - not the other way around. Expert diaper-changer with a ridiculous passion for Open Source.</p>'
   },
   {
     name: 'william',

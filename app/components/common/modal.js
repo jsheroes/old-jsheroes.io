@@ -4,7 +4,7 @@ const Modal = (props) => (
   <div>
     <Style />
     <div className="modal-backdrop fade in"></div>
-    <div id="speaker-info" className="modal fade in" role="dialog" style={{display: 'block', paddingRight: '17px'}}>
+    <div id="modal_body" className="modal fade in" role="dialog" style={{display: 'block', paddingRight: '17px'}}>
       <div className="modal-dialog"> 
           <div className="modal-close-button" data-dismiss="modal" aria-label="Close"><i className="fa fa-window-close-o"></i></div>
     
@@ -29,7 +29,7 @@ const Style = () => (
       background-color: #000;
       transition: opacity .15s linear;
     }
-    #speaker-info {
+    #modal_body {
       text-align: start;
       z-index: 99999;
       overflow-x: hidden;
@@ -49,6 +49,7 @@ const Style = () => (
     .modal-dialog {
       width: 600px;
       margin: 30px auto;
+      position: relative;
     }
     .modal-close-button {
       width: 36px;
@@ -72,11 +73,6 @@ const Style = () => (
       border: 1px solid rgba(0,0,0,.2);
       outline: 0;
       box-shadow: 0 5px 15px rgba(0,0,0,.5);
-    }
-    #speaker-info .speaker-sec {
-      max-width: 360px;
-      margin: auto;
-      text-align: center;
     }
   `}</style>
 )

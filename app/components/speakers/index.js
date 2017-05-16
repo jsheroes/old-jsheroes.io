@@ -1,11 +1,12 @@
 import { Component } from 'react'
 import ScrollableAnchor from 'react-scrollable-anchor'
-import Section from '../../components/common/section'
+import Section from '../common/section'
 import { styles, mediaQueries } from '../../constants'
 import speakers from '../../data/speakers'
 import Speaker from './speaker'
 import ReactDOM from 'react-dom'
-import Modal from '../../components/common/modal'
+import Modal from '../common/modal'
+import Speakermodal from './speaker.modal'
 
 let speakersHTML = []
 let speakersRow = []
@@ -38,20 +39,44 @@ function addClickEvents() {
 };
 
 function openModal(index) {
+  let description = speakers[index].description;
+  let div = document.createElement('div');
+  div.innerHTML = description;
+  let elements = div.childNodes;
+  
+  {/*
+  We could add the code for the modal content here or we could import it as a separate component
+  Didn't know which option was more efficient
+  Will remove one of them later on
+  
   const newModal = (
     <Modal>
-      <p>Hello world {index}</p>
+      <div className="speaker-details">
+        <Speaker data={speakers[index]} />
+        <div className="social-links">
+          {speakers[index].twitter ? (<a href={speakers[index].twitter} target="_blank"><i className="fa fa-twitter"></i></a>) : ""}
+          {speakers[index].github ? (<a href={speakers[index].github} target="_blank"><i className="fa fa-github"></i></a>) : ""} 
+          {speakers[index].website ? (<a href={speakers[index].website} target="_blank"><i className="fa fa-link"></i></a>) : ""} 
+        </div>
+        <div className="speaker-description">
+          <div dangerouslySetInnerHTML={{ __html: speakers[index].description }} />
+        </div>
+      </div>
     </Modal>
   );
+  */}
+  
+  const newModal = (
+    <Speakermodal data={speakers[index]} />
+  );
 
-  console.log('speaker number', index);
-  var modalContainer = document.createElement('div');
+  let modalContainer = document.createElement('div');
   document.body.appendChild(modalContainer);
   ReactDOM.render(
     newModal,
     modalContainer
   );
-  var backdrop = document.getElementById('speaker-info');
+  let backdrop = document.getElementById('modal_body');
   document.body.style.overflow = "hidden";
   backdrop.addEventListener('click', function() {
     document.body.style.overflow = "";
@@ -196,6 +221,69 @@ const Style = () => (
         margin-bottom: 40px;
       }
     }
+  
+  
+  
+  
+    .speaker-details {
+      max-width: 360px;
+      margin: auto;
+      text-align: center;
+    }
+    .speaker-description {
+      margin-left: 26px;
+      text-align: start;
+    }
+    .speaker-description p {
+      font-size: 18px;
+      color: #555;
+      line-height: 32px;
+      font-weight: 300;
+      margin: 0 0 10px 0
+    }
+    .speaker-description a {
+      color: #228dcb;
+      fill: #228dcb;
+    }
+    .social-links {
+      margin-bottom: 10px;
+    }
+    .social-links a {
+      border: 1px solid #333;
+      border-radius: 50%;
+      display: inline-block;
+      line-height: 40px;
+      width: 38px;
+      height: 38px;
+      margin: 0px 2px;
+    }
+    .social-links .fa {
+      font-size: 16px;
+      line-height: 40px;
+      position: relative;
+      color: #333;
+      padding: 0 3px
+    }
+    #modal_body .speaker-sec {
+      max-width: 360px;
+      margin: auto;
+      text-align: center;
+    }
+    #modal_body .text-blue {
+      margin-bottom: 1px;
+    }
+    #modal_body .speaker-info {
+      margin-bottom: 5px;
+      padding: 10px 0 0 0;
+    }
+    #modal_body .speaker-info h6 {
+      line-height: 1.7;
+      margin-bottom: 0;
+    }
+    #modal_body .speaker-hover {
+      pointer-events: none;
+    }
+    
   `}</style>
 )
 
