@@ -78,7 +78,7 @@ const Speaker = props => (
       margin: 0 auto 30px;
       cursor: pointer;
       margin-bottom: 10px;
-      font-size: 28px;
+      font-size: 24px;
       font-weight: 500;
       line-height: 32px;
     }
@@ -97,37 +97,15 @@ const Speaker = props => (
     .text-blue {
       color: #0098FF!important;
     }
-    
-    
-    .speaker-box {
-      width: 100%;
-      display: inline-flex;
-    }
     @media (min-width: ${mediaQueries.S}) {
-      .speaker-box {
-        width: 50%
+      .speaker-info h5 {
+        font-size: 26px;
       }
     }
-    @media (min-width: ${mediaQueries.XL}) {
-      .speaker-box {
-        width: 25%
+    @media (min-width: ${mediaQueries.L}) {
+      .speaker-info h5 {
+        font-size: 28px;
       }
-    }
-      @media (min-width: ${mediaQueries.XL}) {
-        .a-third .speaker-box {
-          width: 33.33333333%
-        }
-      }
-
-    .section-header {
-      margin-bottom: 80px;
-    }
-    .row {
-      margin-right: -15px;
-      margin-left: -15px;
-      display: table;
-      content: " ";
-      width: 100%;
     }
     
   `}</style>
