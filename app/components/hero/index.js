@@ -9,7 +9,7 @@ import { styles, mediaQueries } from '../../constants'
 class Hero extends Component {
   constructor(props) {
     super(props)
-    
+
     this.state = {
       windowHeight: 800,
       top: 0
@@ -43,9 +43,9 @@ class Hero extends Component {
       backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
-      height: this.state.windowHeight,
+      height: this.state.windowHeight
     }
-    
+
     const heroDarkOverlay = {
       display: 'block',
       width: '100%',
@@ -54,9 +54,9 @@ class Hero extends Component {
       position: 'absolute',
       top: '0',
       left: '0',
-      background: 'hsla(0,0%,0%,.6) none repeat scroll 0 0',
+      background: 'hsla(0,0%,0%,.6) none repeat scroll 0 0'
     }
-    
+
     return (
       <Section
         section={{ style: heroBcgImg }}
@@ -64,7 +64,7 @@ class Hero extends Component {
       >
         <ScrollableAnchor id={'home'}>
           <div className="main-content">
-          
+
             <div className="content">
               <h1>JavaScript</h1>
               <h1>International Conference</h1>
@@ -73,9 +73,9 @@ class Hero extends Component {
               <br />
               <br />
             </div>
-            
+
             <CountDownAndTickets />
-            
+
           </div>
         </ScrollableAnchor>
 

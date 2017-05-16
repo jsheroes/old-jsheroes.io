@@ -4,29 +4,29 @@ import { styles, mediaQueries } from '../../constants'
 
 const CountDownAndTickets = () => (
   <div className="counter-sec">
-  
+
     <div className="countdown-counter half-width">
       <div className="timer">
         <div className="countdown styled">
           <div className="countdown-amount">
             22 <span className="countdown-period">Days</span>
           </div>
-        
+
           <div className="countdown-amount">
             09 <span className="countdown-period">Hours</span>
           </div>
-          
+
           <div className="countdown-amount">
             55 <span className="countdown-period">Minutes</span>
           </div>
-          
+
           <div className="countdown-amount">
             59 <span className="countdown-period">Seconds</span>
           </div>
         </div>
       </div>
     </div>
-    
+
     <div className="countdown-btn half-width">
       <Link href="/tickets">
         <a className="btn btn-lg tickets-available" target="_blank">
@@ -77,7 +77,6 @@ const CountDownAndTickets = () => (
         left:0;
         right:0;
         padding:0 15px;
-        z-index:1;
         display: flex;
         align-items: center;
       }
@@ -152,7 +151,7 @@ const CountDownAndTickets = () => (
         vertical-align:middle;
       }
     `}</style>
-    
+
   </div>
 )
 

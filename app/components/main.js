@@ -20,11 +20,11 @@ const Main = props => (
         rel="stylesheet"
       />
     </Head>
-    
+
     <Nav />
-      {props.children}
+    {props.children}
     <Footer />
-    
+
     <style jsx global>{`
 
       html, body, ul, h1, h2, h3 {

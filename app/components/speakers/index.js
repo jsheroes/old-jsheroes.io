@@ -19,7 +19,10 @@ speakers.map((speaker, key) => {
 
   if (speakersRow.length === 4 || key === speakers.length - 1) {
     speakersHTML.push(
-      <div key={key.toString()} className={`row ${speakersRow.length < 4 ? 'a-third': ''}`}>
+      <div
+        key={key.toString()}
+        className={`row ${speakersRow.length < 4 ? 'a-third' : ''}`}
+      >
         {speakersRow}
       </div>
     )
@@ -27,51 +30,46 @@ speakers.map((speaker, key) => {
   }
 })
 
-
 function addClickEvents() {
-  let speakerRedirect = document.getElementsByClassName('speaker-hover');
-  for (let i = 0; i < speakerRedirect.length; i ++) {
+  let speakerRedirect = document.getElementsByClassName('speaker-hover')
+  for (let i = 0; i < speakerRedirect.length; i++) {
     speakerRedirect[i].addEventListener('click', function() {
-      openModal(i);
-    });
+      openModal(i)
+    })
   }
-};
+}
 
 function openModal(index) {
   const newModal = (
     <Modal>
       <p>Hello world {index}</p>
     </Modal>
-  );
+  )
 
-  console.log('speaker number', index);
-  var modalContainer = document.createElement('div');
-  document.body.appendChild(modalContainer);
-  ReactDOM.render(
-    newModal,
-    modalContainer
-  );
-  var backdrop = document.getElementById('speaker-info');
-  document.body.style.overflow = "hidden";
+  console.log('speaker number', index)
+  var modalContainer = document.createElement('div')
+  document.body.appendChild(modalContainer)
+  ReactDOM.render(newModal, modalContainer)
+  var backdrop = document.getElementById('speaker-info')
+  document.body.style.overflow = 'hidden'
   backdrop.addEventListener('click', function() {
-    document.body.style.overflow = "";
-    modalContainer.remove();
-  });
-};
-
+    document.body.style.overflow = ''
+    modalContainer.remove()
+  })
+}
 
 class Speakers extends Component {
   componentDidMount() {
-    addClickEvents(); 
+    addClickEvents()
   }
-  
+
   render() {
     return (
       <Section>
         <ScrollableAnchor id={'speakers'}>
           <div>
             <Style />
-            <div id="modal_container"></div>
+            <div id="modal_container" />
             <div className="section-padding">
               <div className="row, section-header">
                 <h2>Our Heroes</h2>
