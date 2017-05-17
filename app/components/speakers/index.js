@@ -41,12 +41,13 @@ function addClickEvents() {
 }
 
 function openModal(index) {
-  let description = speakers[index].description;
-  let div = document.createElement('div');
-  div.innerHTML = description;
-  let elements = div.childNodes;
-  
-  {/*
+  let description = speakers[index].description
+  let div = document.createElement('div')
+  div.innerHTML = description
+  let elements = div.childNodes
+
+  {
+    /*
   We could add the code for the modal content here or we could import it as a separate component
   Didn't know which option was more efficient
   Will remove one of them later on
@@ -66,17 +67,16 @@ function openModal(index) {
       </div>
     </Modal>
   );
-  */}
-  
-  const newModal = (
-    <Speakermodal data={speakers[index]} />
-  );
+  */
+  }
 
-  let modalContainer = document.createElement('div');
-  document.body.appendChild(modalContainer);
-  ReactDOM.render(newModal, modalContainer);
-  let backdrop = document.getElementById('modal_body');
-  document.body.style.overflow = "hidden";
+  const newModal = <Speakermodal data={speakers[index]} />
+
+  let modalContainer = document.createElement('div')
+  document.body.appendChild(modalContainer)
+  ReactDOM.render(newModal, modalContainer)
+  let backdrop = document.getElementById('modal_body')
+  document.body.style.overflow = 'hidden'
   backdrop.addEventListener('click', function() {
     document.body.style.overflow = ''
     modalContainer.remove()

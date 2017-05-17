@@ -30,7 +30,7 @@ module.exports = [
     twitter: 'https://twitter.com/g33konaut',
     github: 'https://github.com/avgp',
     website: 'http://50linesofco.de',
-    description: '<p>Open web &amp; open source cheerleader, Google Developer Expert for web technologies, W3C contributor, O\'Reilly Workshop instructor, book author and a good guy with a loud laugh. </p>'
+    description: "<p>Open web &amp; open source cheerleader, Google Developer Expert for web technologies, W3C contributor, O'Reilly Workshop instructor, book author and a good guy with a loud laugh. </p>"
   },
   {
     name: 'gautam',
@@ -52,7 +52,7 @@ module.exports = [
     twitter: 'https://twitter.com/markdalgleish',
     github: 'https://github.com/markdalgleish',
     website: '',
-    description: '<p>Mark Dalgleish is the co-creator of CSS Modules, lead organiser of MelbJS, and DesignOps Lead at SEEK, Australia\'s leading job site. Having got his start with HTML and UI design at a young age, Mark has since developed a love of open source and software engineering but always as a means to creating elegant, usable experiences.</p>'
+    description: "<p>Mark Dalgleish is the co-creator of CSS Modules, lead organiser of MelbJS, and DesignOps Lead at SEEK, Australia's leading job site. Having got his start with HTML and UI design at a young age, Mark has since developed a love of open source and software engineering but always as a means to creating elegant, usable experiences.</p>"
   },
   {
     name: 'calinescu',
