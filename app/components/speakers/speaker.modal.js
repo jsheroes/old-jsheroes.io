@@ -2,20 +2,32 @@ import { style, mediaQueries } from '../../constants'
 import Speaker from './speaker'
 import Modal from '../common/modal'
 
-const Speakermodal = (props) => (
+const Speakermodal = props => (
   <Modal>
     <Style />
     <div className="speaker-details">
-        <Speaker data={props.data} />
-        <div className="social-links">
-          {props.data.twitter ? (<a href={props.data.twitter} target="_blank"><i className="fa fa-twitter"></i></a>) : ""}
-          {props.data.github ? (<a href={props.data.github} target="_blank"><i className="fa fa-github"></i></a>) : ""} 
-          {props.data.website ? (<a href={props.data.website} target="_blank"><i className="fa fa-link"></i></a>) : ""} 
-        </div>
-        <div className="speaker-description">
-          <div dangerouslySetInnerHTML={{ __html: props.data.description }} />
-        </div>
+      <Speaker data={props.data} />
+      <div className="social-links">
+        {props.data.twitter
+          ? <a href={props.data.twitter} target="_blank">
+              <i className="fa fa-twitter" />
+            </a>
+          : ''}
+        {props.data.github
+          ? <a href={props.data.github} target="_blank">
+              <i className="fa fa-github" />
+            </a>
+          : ''}
+        {props.data.website
+          ? <a href={props.data.website} target="_blank">
+              <i className="fa fa-link" />
+            </a>
+          : ''}
       </div>
+      <div className="speaker-description">
+        <div dangerouslySetInnerHTML={{ __html: props.data.description }} />
+      </div>
+    </div>
   </Modal>
 )
 

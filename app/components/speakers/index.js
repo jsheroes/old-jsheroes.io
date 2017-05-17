@@ -41,16 +41,14 @@ function addClickEvents() {
 }
 
 function openModal(index) {
-  const newModal = (
-    <Speakermodal data={speakers[index]} />
-  );
+  const newModal = <Speakermodal data={speakers[index]} />
 
-  let modalContainer = document.createElement('div');
-  document.body.appendChild(modalContainer);
-  ReactDOM.render(newModal, modalContainer);
-  let backdrop = document.getElementsByClassName('modal-backdrop')[0];
-  let closeBtn = document.getElementsByClassName('modal-close-button')[0];
-  document.body.style.overflow = "hidden";
+  let modalContainer = document.createElement('div')
+  document.body.appendChild(modalContainer)
+  ReactDOM.render(newModal, modalContainer)
+  let backdrop = document.getElementsByClassName('modal-backdrop')[0]
+  let closeBtn = document.getElementsByClassName('modal-close-button')[0]
+  document.body.style.overflow = "hidden"
   closeBtn.addEventListener('click', function() {
     document.body.style.overflow = ''
     modalContainer.remove()
