@@ -79,6 +79,9 @@ const Style = () => (
     #modal_body .speaker-hover {
       pointer-events: none;
     }
+    #modal_body .speaker-info-box {
+      pointer-events: none;
+    }
   `}</style>
 )
 

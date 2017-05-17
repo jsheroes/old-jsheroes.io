@@ -3,23 +3,20 @@ import { style, mediaQueries } from '../../constants'
 const Modal = props => (
   <div>
     <Style />
-    <div className="modal-backdrop fade in" />
+    
     <div
       id="modal_body"
-      className="modal fade in"
-      role="dialog"
       style={{ display: 'block', paddingRight: '17px' }}
     >
+      <div className="modal-backdrop" />
       <div className="modal-dialog">
         <div
           className="modal-close-button"
-          data-dismiss="modal"
-          aria-label="Close"
         >
           <i className="fa fa-window-close-o" />
         </div>
 
-        <div className="modal-content padding_4x4_40">
+        <div className="modal-content">
           {props.children}
         </div>
       </div>
@@ -38,7 +35,7 @@ const Style = () => (
       left: 0;
       z-index: 1040;
       background-color: #000;
-      transition: opacity .15s linear;
+      animation: fadeIn .5s;
     }
     #modal_body {
       text-align: start;
@@ -53,14 +50,15 @@ const Style = () => (
       left: 0;
       z-index: 1050;
       display: none;
-      overflow: hidden;
+      overflow: auto;
       outline: 0;
-      transition: opacity .15s linear;
     }
     .modal-dialog {
       width: 600px;
       margin: 30px auto;
       position: relative;
+      z-index: 1050;
+      animation: bounceIn .5s;
     }
     .modal-close-button {
       width: 36px;
@@ -84,6 +82,21 @@ const Style = () => (
       border: 1px solid rgba(0,0,0,.2);
       outline: 0;
       box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    }
+    
+    @keyframes bounceIn {
+      0% {
+        transform: translate(0,-25%);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(0,0);
+      }
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
     }
   `}</style>
 )
