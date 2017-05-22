@@ -70,8 +70,7 @@ class Speakers extends Component {
         <ScrollableAnchor id={'speakers'}>
           <div>
             <Style />
-            <div id="modal_container" />
-            <div className="section-padding">
+            <div id="speakers_section" className="section-padding">
               <div className="row, section-header">
                 <h2>Our Heroes</h2>
                 <p>
@@ -94,22 +93,22 @@ class Speakers extends Component {
 
 const Style = () => (
   <style jsx>{`
-    .section-padding {
+    #speakers_section.section-padding {
       padding: 80px 0; 
     }
-    .section-header {
+    #speakers_section .section-header {
       margin-bottom: 45px;
       padding-right: 15px;
       padding-left: 15px;
     }
-    .section-header h2 {
+    #speakers_section .section-header h2 {
       text-align: center;
       font-size: 33px;
       color: ${styles.mainColor4};
       font-weight: 700;
       margin: 0 auto 30px;
     }
-    .section-header p {
+    #speakers_section .section-header p {
       width: 98%;
       margin-bottom: 20px;
       font-size: 16px;
@@ -120,33 +119,7 @@ const Style = () => (
       margin-left: auto;
       margin-right: auto;
     }
-    @media (max-width: ${mediaQueries.XL}) and (min-width: ${mediaQueries.L}) {
-      section-padding {
-        padding: 90px 0;
-      }
-      .section-header h2 {
-        font-size: 46px;
-      }
-      .section-header p {
-        font-size: 17px;
-        line-height: 30px;
-        margin-bottom: 30px;
-      }
-    }
-    @media only screen and (max-width: ${mediaQueries.S}) {
-      section-padding {
-        padding: 80px 0;
-      }
-      .section-header h2 {
-        font-size: 33px;
-      }
-      .section-header p {
-        font-size: 16px;
-        line-height: 28px;
-        margin-bottom: 20px;
-      }
-    }
-    .row {
+    #speakers_section .row {
       display: table;
       width: 100%;
     }
@@ -155,18 +128,29 @@ const Style = () => (
       display: inline-flex;
     }
     @media (min-width: ${mediaQueries.S}) {
+      #speakers_section.section-padding {
+        padding: 80px 0;
+      }
+      #speakers_section .section-header h2 {
+        font-size: 33px;
+      }
+      #speakers_section .section-header p {
+        font-size: 16px;
+        line-height: 28px;
+        margin-bottom: 20px;
+      }
       .speaker-box {
         width: 50%
       }
     }
     @media (min-width: ${mediaQueries.L}) {
-      section-padding {
+      #speakers_section.section-padding {
         padding: 90px 0;
       }
-      .section-header h2 {
+      #speakers_section .section-header h2 {
         font-size: 46px;
       }
-      .section-header p {
+      #speakers_section .section-header p {
         font-size: 17px;
         line-height: 30px;
         margin-bottom: 30px;
@@ -179,13 +163,13 @@ const Style = () => (
       .a-third .speaker-box {
         width: 33.33333333%
       }
-      .section-padding {
+      #speakers_section.section-padding {
         padding: 140px 0; 
       }
-      .section-header h2 {
+      #speakers_section .section-header h2 {
         font-size: 52px;
       }
-      .section-header p {
+      #speakers_section .section-header p {
         font-size: 18px;
         line-height: 32px;
         margin-bottom: 40px;
