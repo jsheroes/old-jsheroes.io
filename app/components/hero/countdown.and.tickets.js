@@ -1,69 +1,59 @@
 import { Component } from 'react'
+import Router from 'next/router'
 import Link from 'next/link'
 import { styles, mediaQueries } from '../../constants'
 
-const launchDate = new Date('2017-06-08 09:00').getTime()
-const cDate = new Date().getTime()
-const d = launchDate - cDate
+let interval
+const time = () => {
+  const launchDate = new Date('2017-06-08 00:00').getTime()
+  const cDate = new Date().getTime()
+  let ms = launchDate - cDate
+  ms = ms <= 0 ? 0 : ms
+
+  return {
+    ms,
+    days: Math.floor(ms / (1000 * 60 * 60 * 24)),
+    hours: Math.floor(ms % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)),
+    minutes: Math.floor(ms % (1000 * 60 * 60) / (1000 * 60)),
+    seconds: Math.floor(ms % (1000 * 60) / 1000)
+  }
+}
 
 export default class CountDownAndTickets extends Component {
   constructor(props) {
     super(props)
-
     this.state = {
-      x: 0,
-      days: Math.floor(d / (1000 * 60 * 60 * 24)),
-      hours: Math.floor(d % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)),
-      minutes: Math.floor(d % (1000 * 60 * 60) / (1000 * 60)),
-      seconds: Math.floor(d % (1000 * 60) / 1000)
+      ...time()
     }
   }
 
-  callX() {
-    let _this = this
-    let copyX = this.state.x
+  componentWillMount() {
+    interval = setInterval(() => {
+      const newState = time()
 
-    this.setState({
-      x: setInterval(function() {
-        let n = new Date().getTime()
-        let d = launchDate - n
-        _this.setState({
-          days: Math.floor(d / (1000 * 60 * 60 * 24)),
-          hours: Math.floor(d % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)),
-          minutes: Math.floor(d % (1000 * 60 * 60) / (1000 * 60)),
-          seconds: Math.floor(d % (1000 * 60) / 1000)
-        })
+      if (interval && newState.ms === 0) {
+        clearInterval(interval)
+        return
+      }
 
-        if (d < 0) {
-          clearInterval(copyX)
-        }
+      // if (interval && pathName !== '/') {
+      // clearInterval(interval);
+      //   return
+      // }
 
-        if (this.location.pathname !== '/') {
-          clearInterval(copyX)
-        }
-      }, 1000)
-    })
-  }
-
-  componentDidMount() {
-    this.callX()
-  }
-
-  componentWillUpdate(nextProps, nextState) {
-    if (nextState.seconds != this.state.seconds) {
-      this.callX()
-    }
+      this.setState(newState)
+    }, 1000)
   }
 
   componentWillUnmount() {
-    let copyX = this.state.x
-
-    this.setState({
-      x: clearInterval(copyX)
-    })
+    if (interval) {
+      clearInterval(interval)
+    }
   }
 
   render() {
+    const { days, hours, minutes, seconds } = this.state
+
     return (
       <div className="counter-sec">
 
@@ -71,23 +61,23 @@ export default class CountDownAndTickets extends Component {
           <div className="timer">
             <div className="countdown styled">
 
-              <div className="countdown-amount" ref="myDay">
-                {this.state.days}
+              <div className="countdown-amount">
+                {days}
                 <span className="countdown-period">Days</span>
               </div>
 
-              <div className="countdown-amount" ref="myHour">
-                {this.state.hours}
+              <div className="countdown-amount">
+                {hours}
                 <span className="countdown-period">Hours</span>
               </div>
 
-              <div className="countdown-amount" ref="myMin">
-                {this.state.minutes}
+              <div className="countdown-amount">
+                {minutes}
                 <span className="countdown-period">Minutes</span>
               </div>
 
-              <div className="countdown-amount" ref="mySec">
-                {this.state.seconds}
+              <div className="countdown-amount">
+                {seconds}
                 <span className="countdown-period">Seconds</span>
               </div>
             </div>

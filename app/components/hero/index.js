@@ -1,9 +1,8 @@
 import { Component } from 'react'
 import ScrollableAnchor from 'react-scrollable-anchor'
-import Link from 'next/link'
 
 import Section from '../../components/common/section'
-import CountDownAndTickets from './countdownandtickets'
+import CountDownAndTickets from './countdown.and.tickets'
 import { styles, mediaQueries } from '../../constants'
 
 class Hero extends Component {
@@ -39,7 +38,7 @@ class Hero extends Component {
     let heroBcgImg = {
       position: 'relative',
       overflow: 'hidden',
-      backgroundImage: 'url(static/img/header-background.jpg)',
+      backgroundImage: 'url(static/img/banners/header-background.jpg)',
       backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',
@@ -64,7 +63,6 @@ class Hero extends Component {
       >
         <ScrollableAnchor id={'home'}>
           <div className="main-content">
-
             <div className="content">
               <h1>JavaScript</h1>
               <h1>International Conference</h1>
@@ -75,7 +73,6 @@ class Hero extends Component {
             </div>
 
             <CountDownAndTickets />
-
           </div>
         </ScrollableAnchor>
 
