@@ -1,6 +1,7 @@
 import CompMain from '../app/components/main'
 import Hero from '../app/components/hero'
 import About from '../app/components/about'
+import Tickets from '../app/components/tickets_info'
 import Speakers from '../app/components/speakers'
 import Schedule from '../app/components/schedule'
 import Mission from '../app/components/mission'
@@ -14,6 +15,7 @@ export default () => (
   <CompMain>
     <Hero />
     <About />
+    <Tickets />
     <Speakers />
     <Schedule />
     <Mission />

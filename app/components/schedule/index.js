@@ -45,7 +45,7 @@ day1.map((event, key) => {
 
 day2.map((event, key) => {
   day2HTML.push(
-    <div className="conference-time-list" key={key.toString()}>
+    <div className={"conference-time-list " + `${!event.name ? "empty" : ""}`} key={key.toString()}>
       <div className="conf-user-time">
         <span className="time">{event.time}</span>
         <span className="time-schedule">{event.period}</span>
@@ -120,17 +120,8 @@ const Schedule = props => (
 
 const Style = () => (
   <style jsx>{`
-    #day1 {
+    #day1, #day2 {
       display: block!important;
-      float: left;
-      width: 50%;
-      color: ${styles.mainColor3};
-      position: relative;
-    }
-    #day2 {
-      display: block!important;
-      float: right;
-      width: 50%;
       color: ${styles.mainColor3};
       position: relative;
     }
@@ -142,10 +133,25 @@ const Style = () => (
       margin: 50px 117px 20px;
       position: relative;
     }
+    .schedule-dayz:after {
+      content: " ";
+      position: absolute;
+      border-top: 10px solid #228dcb;
+      border-right: 10px solid transparent;
+      border-left: 10px solid transparent;
+      top: 60px;
+      left: 28px;
+    }
     .conference-time-list {
       border-top: 3px solid #393939;
       overflow: hidden;
       position: relative;
+      clear: both;
+      text-align: center;
+      padding: 20px 0;
+    }
+    .conference-time-list.empty {
+      display: none;
     }
     .conference-time-list:nth-last-child(1) {
       border-bottom: 3px solid #393939;
@@ -153,30 +159,27 @@ const Style = () => (
     .conf-user-time {
       color: #fff;
       float: left;
-      padding: 15px;
+      padding: 15px 0;
       text-align: center;
-      width: 135px;
+      width: 74px;
       font-weight: 300;
+      box-sizing: border-box;
     }
     .conf-user-time span.time {
-      font-size: 24px;
-      color: #8e8e8e;
-      text-align: right;
-      margin-bottom: -20px;
       display: block;
-      line-height: 60px;
+      font-size: 24px;
+      line-height: 40px;
     }
     .conf-user-time span.time-schedule {
-      font-size: 16px;
-      color: #8e8e8e;
-      text-align: right;
       display: block;
+      font-size: 16px;
+      text-align: center;
     }
     .conf-user-img {
       float: left;
-      padding: 29px 20px;
-      width: 100px;
       box-sizing: border-box;
+      padding: 9px;
+      width: 75px;
     }
     .conf-user-img img {
       display: block;
@@ -189,9 +192,9 @@ const Style = () => (
     }
     .conf-user-info {
       float: left;
-      padding: 34px 10px;
-      width: 515px;
       box-sizing: border-box;
+      padding: 15px 5px;
+      width: 66%;
     }
     .conf-user-info h5 {
       color: #228dcb;
@@ -321,6 +324,29 @@ const Style = () => (
         line-height: 28px;
         margin-bottom: 20px;
       }
+      .conference-time-list {
+        padding: initial;
+      }
+      .conf-user-time {
+        padding: 10px;
+        width: 110px;
+      }
+      .conf-user-time span.time {
+        font-size: 38px;
+        line-height: 60px;
+      }
+      .conf-user-time span.time-schedule {
+        font-size: 20px;
+        text-align: right;
+      }
+      .conf-user-img {
+        padding: 30px 15px;
+        width: 90px;
+      }
+      .conf-user-info {
+        padding: 34px 0;
+        width: 520px;
+      }
     }
     @media (min-width: ${mediaQueries.L}) {
       #schedule_section.section-padding {
@@ -337,6 +363,21 @@ const Style = () => (
       .schedule-dayz {
         margin: 50px 147px 20px!important;
       }
+      .conf-user-time {
+        padding: 15px;
+        width: 135px;
+      }
+      .conf-user-time span.time {
+        font-size: 44px;
+      }
+      .conf-user-img {
+        padding: 29px 20px;
+        width: 100px;
+      }
+      .conf-user-info {
+        padding: 34px 10px;
+        width: 515px;
+      }
     }
     @media (min-width: ${mediaQueries.XL}) {
       #schedule_section.section-padding {
@@ -350,7 +391,10 @@ const Style = () => (
         line-height: 32px;
         margin-bottom: 40px;
       }
-      
+      #day1, #day2 {
+        float: left;
+        width: 50%;
+      }
       #day1:before {
         content: "Day 1";
       }
@@ -384,9 +428,23 @@ const Style = () => (
       }
       .conference-time-list {
         min-height: 130px;
+        text-align: left;
+      }
+      .conference-time-list.empty {
+        display: block;
       }
       .conf-user-time {
         padding: 0;
+      }
+      .conf-user-time span.time {
+        font-size: 24px;
+        color: #8e8e8e;
+        text-align: right;
+        margin-bottom: -20px;
+      }
+      .conf-user-time span.time-schedule {
+        font-size: 16px;
+        color: #8e8e8e;
       }
       .conf-user-img {
         padding: 20px;
