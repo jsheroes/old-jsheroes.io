@@ -10,7 +10,6 @@ import Speakermodal from './speaker.modal'
 let speakersHTML = []
 let speakersRow = []
 
-
 speakers.map((speaker, key) => {
   speakersRow.push(
     <div key={key.toString()} className="speaker-box">
@@ -32,7 +31,7 @@ speakers.map((speaker, key) => {
 })
 
 function addClickEvents() {
-  let speakerRedirect = document.getElementsByClassName('speaker-sec');
+  let speakerRedirect = document.getElementsByClassName('speaker-sec')
   for (let i = 0; i < speakerRedirect.length; i++) {
     speakerRedirect[i].addEventListener('click', function() {
       openModal(i)
@@ -48,7 +47,7 @@ function openModal(index) {
   ReactDOM.render(newModal, modalContainer)
   let backdrop = document.getElementsByClassName('modal-backdrop')[0]
   let closeBtn = document.getElementsByClassName('modal-close-button')[0]
-  document.body.style.overflow = "hidden"
+  document.body.style.overflow = 'hidden'
   closeBtn.addEventListener('click', function() {
     document.body.style.overflow = ''
     modalContainer.remove()

@@ -226,7 +226,7 @@ const CompTickets = props => (
 
     `}</style>
 
-    <style global jsx>{`
+    <style jsx global>{`
       #tito-tito-cluj-javascripters-jsheroes-2017-1-tickets-embed {
          max-width: none!important;
       }

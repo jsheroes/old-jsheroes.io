@@ -13,6 +13,12 @@ const Footer = () => (
       <Link href="/">
         <a>About the Community</a>
       </Link>
+
+      <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+
+      <Link href="/newsletter">
+        <a>Newsletter</a>
+      </Link>
     </p>
 
     <p>
