@@ -68,7 +68,7 @@ export default class Nav extends Component {
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 1;
+            z-index: 3;
             background-color: rgba(0, 0, 0, ${initialOpacity});
             line-height: 100px;
             -webkit-transition: line-height .3s ease-out;
