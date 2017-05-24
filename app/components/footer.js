@@ -4,7 +4,7 @@ import { styles } from '../constants'
 const Footer = () => (
   <footer>
     <p>
-      <Link href="/">
+      <Link href="/code-of-conduct">
         <a>Code of Conduct</a>
       </Link>
 
@@ -23,7 +23,7 @@ const Footer = () => (
 
     <p>
       Copyright © 2017&nbsp;
-      <Link href="/">
+      <Link href="/cluj-javascripters">
         <a className="text-blue">JSHeroes</a>
       </Link>
       . All Rights Reserved

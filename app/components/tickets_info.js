@@ -7,54 +7,70 @@ const Tickets = props => (
       <div className="half-section">
         <div className="column-inner">
           <div className="conference-content-box">
-            <div style={{minHeight: '240px'}}>
+            <div style={{ minHeight: '240px' }}>
               <h2>Join Us!</h2>
-              <p>We like to think that we’re all junior developers, for life.</p>
-              <br/>
-              <p>We’re working on all the details of the event to make sure that, however extended your knowledge is right now, you’ll get the best possible learning experience!</p>
-              <br/>
+              <p>
+                We like to think that we’re all junior developers, for life.
+              </p>
+              <br />
+              <p>
+                We’re working on all the details of the event to make sure that, however extended your knowledge is right now, you’ll get the best possible learning experience!
+              </p>
+              <br />
               <p>Want a new superpower?  Buy your ticket today!</p>
             </div>
-            <br/>
+            <br />
             <div>
-              <a href="/tickets" id="tickets_btn" style={{fontSize: '30px'}} target="_blank">TICKETS</a>
-              <br/>
-              <br/>
+              <a
+                href="/tickets"
+                id="tickets_btn"
+                style={{ fontSize: '30px' }}
+                target="_blank"
+              >
+                TICKETS
+              </a>
+              <br />
+              <br />
               <p><small>*this event is non-profit</small></p>
             </div>
           </div>
         </div>
-        <div className="section-conference-bg meetup-bg-img"></div>
-        <div className="dark-overlay"></div>
+        <div className="section-conference-bg meetup-bg-img" />
+        <div className="dark-overlay" />
       </div>
       <div className="half-section">
         <div className="column-inner">
           <div className="conference-start-box">
             <h4>JSHeroes Tickets Info</h4>
-            <br/>
+            <br />
             <p>
               <span>
                 <b>
                   The Early and the Reasonably Early Bird Tickets are sold out.
                 </b>
               </span>
-              <br/>
-              <br/>
+              <br />
+              <br />
               <span>
-              If you’re a group of 5 or more, contact us for a group discount.
+                If you’re a group of 5 or more, contact us for a group discount.
               </span>
             </p>
-            <br/>
+            <br />
             <p>As you might expect, each ticket includes:</p>
             <ul>
               <li>2 days fully packed with high-class JS talks,</li>
-              <li>premium catering lunch on both days (vegan options available) and coffee breaks</li>
+              <li>
+                premium catering lunch on both days (vegan options available) and coffee breaks
+              </li>
             </ul>
-            <p>The meetup with the speakers, on June 7th, is not included in any of the conference ticket price. For that, follow the updates and RSVP on the Cluj JavaScripters group from Meetup.com </p>
+            <p>
+              The meetup with the speakers, on June 7th, is not included in any of the conference ticket price. For that, follow the updates and RSVP on the Cluj JavaScripters group from Meetup.com
+              {' '}
+            </p>
           </div>
         </div>
-        <div className="section-conference-bg rocket-bg-img"></div>
-        <div className="blue-bg"></div>
+        <div className="section-conference-bg rocket-bg-img" />
+        <div className="blue-bg" />
       </div>
     </div>
     <style jsx>{`
