@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Section from '../components/common/section'
 import { styles, mediaQueries } from '../constants'
 
-const Contact = () => (
+const Contact = props => (
   <Section section={{ style: { backgroundColor: styles.mainColor4 } }}>
     <ScrollableAnchor id={'contact'}>
       <div>
@@ -22,34 +22,39 @@ const Contact = () => (
           We'd be more than happy to assist you in any possible way.
         </p>
 
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/clujsers" target="_blank">
-              <i className="fa fa-facebook" aria-hidden="true" />
-            </a>
-          </li>
+        {props.newsletter
+          ? null
+          : <ul>
+              <li>
+                <a href="https://www.facebook.com/clujsers" target="_blank">
+                  <i className="fa fa-facebook" aria-hidden="true" />
+                </a>
+              </li>
 
-          <li>
-            <a href="https://twitter.com/jsheroes" target="_blank">
-              <i className="fa fa-twitter" aria-hidden="true" />
-            </a>
-          </li>
+              <li>
+                <a href="https://twitter.com/jsheroes" target="_blank">
+                  <i className="fa fa-twitter" aria-hidden="true" />
+                </a>
+              </li>
 
-          <li>
-            <a href="https://github.com/cluj-javascripters/" target="_blank">
-              <i className="fa fa-github" aria-hidden="true" />
-            </a>
-          </li>
+              <li>
+                <a
+                  href="https://github.com/cluj-javascripters/"
+                  target="_blank"
+                >
+                  <i className="fa fa-github" aria-hidden="true" />
+                </a>
+              </li>
 
-          <li>
-            <a
-              href="https://www.meetup.com/Cluj-Javascripters/"
-              target="_blank"
-            >
-              <i className="fa fa-meetup" aria-hidden="true" />
-            </a>
-          </li>
-        </ul>
+              <li>
+                <a
+                  href="https://www.meetup.com/Cluj-Javascripters/"
+                  target="_blank"
+                >
+                  <i className="fa fa-meetup" aria-hidden="true" />
+                </a>
+              </li>
+            </ul>}
 
       </div>
     </ScrollableAnchor>

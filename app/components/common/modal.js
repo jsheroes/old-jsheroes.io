@@ -3,16 +3,11 @@ import { style, mediaQueries } from '../../constants'
 const Modal = props => (
   <div>
     <Style />
-    
-    <div
-      id="modal_body"
-      style={{ display: 'block', paddingRight: '17px' }}
-    >
+
+    <div id="modal_body" style={{ display: 'block', paddingRight: '17px' }}>
       <div className="modal-backdrop" />
       <div className="modal-dialog">
-        <div
-          className="modal-close-button"
-        >
+        <div className="modal-close-button">
           <i className="fa fa-window-close-o" />
         </div>
 

@@ -140,7 +140,7 @@ module.exports = [
     twitter: 'https://twitter.com/xav_cz',
     github: 'https://github.com/xavcz',
     website: 'http://xav.cz',
-    description: '<p>I\'m passionate about open-source, and I build apps for early-stage startups as an independent developer for a living. I\'m also the maintainer of two Apollo-related open-source projects: the Meteor\'s Apollo integration &amp; Telescope, one of the biggest Meteor open-source app running with React &amp; GraphQL.</p>'
+    description: "<p>I'm passionate about open-source, and I build apps for early-stage startups as an independent developer for a living. I'm also the maintainer of two Apollo-related open-source projects: the Meteor's Apollo integration &amp; Telescope, one of the biggest Meteor open-source app running with React &amp; GraphQL.</p>"
   },
   {
     name: 'salnikov',
