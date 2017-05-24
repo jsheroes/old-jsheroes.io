@@ -10,6 +10,7 @@ import Partners from '../app/components/partners'
 import Communities from '../app/components/communities'
 import Venue from '../app/components/venue'
 import Contact from '../app/components/contact'
+import ScrollBtn from '../app/components/scroll-btn'
 
 export default () => (
   <CompMain>
@@ -24,5 +25,6 @@ export default () => (
     <Communities />
     <Venue />
     <Contact />
+    <ScrollBtn />
   </CompMain>
 )
