@@ -1,34 +1,34 @@
 module.exports = [
   {
-    url: '#home',
+    url: '/#home',
     label: 'home'
   },
   {
-    url: '#about',
+    url: '/#about',
     label: 'about'
   },
   {
-    url: '#speakers',
+    url: '/#speakers',
     label: 'speakers'
   },
   {
-    url: '#schedule',
+    url: '/#schedule',
     label: 'schedule'
   },
   {
-    url: '#mission',
+    url: '/#mission',
     label: 'mission'
   },
   {
-    url: '#sponsors',
+    url: '/#sponsors',
     label: 'sponsors'
   },
   {
-    url: '#venue',
+    url: '/#venue',
     label: 'venue'
   },
   {
-    url: '#contact',
+    url: '/#contact',
     label: 'contact'
   }
 ]
