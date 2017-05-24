@@ -12,11 +12,16 @@ const time = () => {
 
   return {
     ms,
-    days: Math.floor(ms / (1000 * 60 * 60 * 24)),
-    hours: Math.floor(ms % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)),
-    minutes: Math.floor(ms % (1000 * 60 * 60) / (1000 * 60)),
-    seconds: Math.floor(ms % (1000 * 60) / 1000)
+    days: formatNumber(Math.floor(ms / (1000 * 60 * 60 * 24))),
+    hours: formatNumber(Math.floor(ms % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))),
+    minutes: formatNumber(Math.floor(ms % (1000 * 60 * 60) / (1000 * 60))),
+    seconds: formatNumber(Math.floor(ms % (1000 * 60) / 1000))
   }
+}
+
+function formatNumber(number) {
+  number = number.toString()
+  return number.length == 1 ? "0" + number : number
 }
 
 export default class CountDownAndTickets extends Component {
@@ -207,6 +212,104 @@ export default class CountDownAndTickets extends Component {
             line-height:1;
             vertical-align:middle;
           }
+          
+          @media (min-width: ${mediaQueries.S}) {
+            .btn.btn-lg {
+              font-size: 34px!important;
+              font-weight: 300!important;
+              padding: 40px 38px;
+            }
+            .countdown-amount {
+            	font-size:34px;
+            	margin:0 auto;
+            	padding:8px 0;
+            	width:85px;
+            }
+            .countdown-period {
+            	font-size:16px;
+            }
+            .countdown-amount::after {
+            	right:0;
+            }
+          }
+          
+          @media (min-width: ${mediaQueries.L}) {
+            .btn.btn-lg {
+            	padding:50px 58px;
+            	font-size:40px !important;
+            	font-weight: 600!important;
+            }
+            .countdown-amount {
+              font-size: 50px;
+              margin: 0 42px 0 auto;
+              padding: 15px 0;
+              width: auto;
+            }
+            .countdown-amount::after {
+              right: -21px;
+            }
+            .countdown-period {
+              font-size: 17px;
+            }
+          }
+          @media (min-width: ${mediaQueries.XL}) {
+            .btn.btn-lg {
+              font-size: 44px!important;
+              font-weight: 600!important;
+              padding: 50px 108px;
+            }
+          }
+          @media (max-width: ${mediaQueries.S}) {
+            .counter-sec {
+              margin: 0 -15px;
+              padding: 0;
+            	flex-flow: column;
+            }
+            .half-width {
+            	float:none;
+            	width:100%;
+            }
+            .countdown-amount {
+            	font-size:36px;
+            	margin:0 auto;
+            	padding:8px 0;
+            	width:120px;
+            }
+            .countdown-period {
+            	font-size:18px;
+            }
+            .countdown-amount::after {
+            	right:0;
+            }
+            .btn.btn-lg {
+            	font-size:25px !important;
+            	padding:25px 10px;
+            	width:100%;
+            }
+            .btn.btn-lg::after {
+            	font-size:24px;
+            }
+            .countdown-counter {
+            	padding:12px 0;
+            }
+          }
+          @media (max-width:479px) {
+            .countdown-amount {
+            	font-size:26px;
+            	width:72px;
+            }
+            .countdown-period {
+            	font-size:16px;
+            }
+            .banner-tagline p {
+            	font-size:18px;
+            	margin-top:10px;
+            }
+            .btn.btn-lg {
+            	width:100%;
+            }
+          }
+          
         `}</style>
       </div>
     )
