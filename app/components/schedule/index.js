@@ -5,34 +5,36 @@ import schedule from '../../data/schedule'
 
 let day1HTML = []
 let day2HTML = []
-let day1  = schedule['day_1']
-let day2  = schedule['day_2']
-
+let day1 = schedule['day_1']
+let day2 = schedule['day_2']
 
 day1.map((event, key) => {
   day1HTML.push(
     <div className="conference-time-list" key={key.toString()}>
       <div className="conf-user-time">
         <span className="time">{event.time}</span>
-        <span className="time-schedule">{event.period}</span> 
+        <span className="time-schedule">{event.period}</span>
       </div>
-      <div className="conf-user-img"> 
-        {event.img ? 
-          <img src={'static/img/schedule/' + event.img} alt="event image" /> 
+      <div className="conf-user-img">
+        {event.img
+          ? <img src={'static/img/schedule/' + event.img} alt="event image" />
           : ''}
       </div>
       <div id={'d1info' + key} className="conf-user-info collapse">
-        <h5 className={`${['Lunch Time','Coffee Break'].indexOf(event.name) != -1 ?
-        'gray-text' : ''}`}>
+        <h5
+          className={`${['Lunch Time', 'Coffee Break'].indexOf(event.name) != -1 ? 'gray-text' : ''}`}
+        >
           {event.name}
         </h5>
         <h6>{event.summary}</h6>
-        {event.description ? 
-          <a onClick={toggleInfo.bind(this, 'd1info' + key)}
-          className="conf-close"> 
-            <i className="fa fa-angle-right"></i> 
-          </a>
-        : ''}
+        {event.description
+          ? <a
+              onClick={toggleInfo.bind(this, 'd1info' + key)}
+              className="conf-close"
+            >
+              <i className="fa fa-angle-right" />
+            </a>
+          : ''}
         <div className="event-description">
           <div className="conf-user-content">
             <p>{event.description}</p>
@@ -45,28 +47,34 @@ day1.map((event, key) => {
 
 day2.map((event, key) => {
   day2HTML.push(
-    <div className={"conference-time-list " + `${!event.name ? "empty" : ""}`} key={key.toString()}>
+    <div
+      className={'conference-time-list ' + `${!event.name ? 'empty' : ''}`}
+      key={key.toString()}
+    >
       <div className="conf-user-time">
         <span className="time">{event.time}</span>
         <span className="time-schedule">{event.period}</span>
       </div>
-      <div className="conf-user-img"> 
-        {event.img ? 
-          <img src={'static/img/schedule/' + event.img} alt="event image" /> 
+      <div className="conf-user-img">
+        {event.img
+          ? <img src={'static/img/schedule/' + event.img} alt="event image" />
           : ''}
       </div>
       <div id={'d2info' + key} className="conf-user-info collapse">
-        <h5 className={`${['Lunch Time','Coffee Break'].indexOf(event.name) != -1 ?
-        'gray-text' : ''}`}>
+        <h5
+          className={`${['Lunch Time', 'Coffee Break'].indexOf(event.name) != -1 ? 'gray-text' : ''}`}
+        >
           {event.name}
         </h5>
         <h6>{event.summary}</h6>
-        {event.description ? 
-          <a onClick={toggleInfo.bind(this, 'd2info' + key)}
-          className="conf-close"> 
-            <i className="fa fa-angle-right"></i> 
-          </a>
-        : ''}
+        {event.description
+          ? <a
+              onClick={toggleInfo.bind(this, 'd2info' + key)}
+              className="conf-close"
+            >
+              <i className="fa fa-angle-right" />
+            </a>
+          : ''}
         <div className="event-description">
           <div className="conf-user-content">
             <p>{event.description}</p>
@@ -90,17 +98,19 @@ const Schedule = props => (
         <div id="schedule_section" className="section-padding">
           <div className="row, section-header">
             <h2>Conference Schedule</h2>
-            <p>Throughout the two days of conference, our heroes will talk about the
-            {' '}
-            latest trends in the world of JavaScript and Web Development. We have designed
-            {' '}
-            an agenda that is well balanced and targets the entire audience, including the
-            {' '}
-            people with extensive knowledge and experience. For this, all the speakers’
-            {' '}
-            proposals go through a complete analysis. We are committed to tackle diverse
-            {' '}
-            topics and flavors from the JavaScript ecosystem:</p>
+            <p>
+              Throughout the two days of conference, our heroes will talk about the
+              {' '}
+              latest trends in the world of JavaScript and Web Development. We have designed
+              {' '}
+              an agenda that is well balanced and targets the entire audience, including the
+              {' '}
+              people with extensive knowledge and experience. For this, all the speakers’
+              {' '}
+              proposals go through a complete analysis. We are committed to tackle diverse
+              {' '}
+              topics and flavors from the JavaScript ecosystem:
+            </p>
           </div>
           <div className="row">
             <div id="day1">

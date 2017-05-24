@@ -4,13 +4,13 @@ import { styles } from '../constants'
 const Footer = () => (
   <footer>
     <p>
-      <Link href="/">
+      <Link href="/code-of-conduct">
         <a>Code of Conduct</a>
       </Link>
 
       <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 
-      <Link href="/">
+      <Link href="/cluj-javascripters">
         <a>About the Community</a>
       </Link>
 

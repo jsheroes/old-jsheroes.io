@@ -38,7 +38,7 @@ class Hero extends Component {
     let heroBcgImg = {
       position: 'relative',
       overflow: 'hidden',
-      backgroundImage: 'url(static/img/banners/header-background.jpg)',
+      backgroundImage: 'url(static/img/banners/header_background.jpg)',
       backgroundPosition: 'center center',
       backgroundRepeat: 'no-repeat',
       backgroundSize: 'cover',

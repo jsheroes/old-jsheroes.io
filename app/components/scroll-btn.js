@@ -2,9 +2,9 @@ import { style, mediaQueries } from '../constants'
 
 const ScrollBtn = props => (
   <div>
-    <div id="back_top" > 
+    <div id="back_top">
       <a href="#home">
-        <i className="fa fa-angle-up"></i>
+        <i className="fa fa-angle-up" />
       </a>
     </div>
     <style jsx>{`
