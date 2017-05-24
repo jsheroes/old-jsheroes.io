@@ -10,7 +10,7 @@ const Footer = () => (
 
       <span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
 
-      <Link href="/">
+      <Link href="/cluj-javascripters">
         <a>About the Community</a>
       </Link>
 
@@ -23,7 +23,7 @@ const Footer = () => (
 
     <p>
       Copyright © 2017&nbsp;
-      <Link href="/cluj-javascripters">
+      <Link href="/">
         <a className="text-blue">JSHeroes</a>
       </Link>
       . All Rights Reserved
