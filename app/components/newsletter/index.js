@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import ScrollableAnchor from 'react-scrollable-anchor'
 
 import Section from '../../components/common/section'
 import { styles, mediaQueries } from '../../constants'
@@ -28,8 +29,8 @@ const heroDarkOverlay = {
 const NewsletterHero = props => (
   <div>
     <Head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width,initial-scale=1" />
       <meta
         name="keywords"
@@ -82,7 +83,11 @@ const NewsletterHero = props => (
     <Section
       section={{ style: heroBcgImg }}
       mainContainer={{ style: heroDarkOverlay }}
-    />
+    >
+      <ScrollableAnchor id={'home'}>
+        <div />
+      </ScrollableAnchor>
+    </Section>
   </div>
 )
 

@@ -1,73 +1,90 @@
 import { Component } from 'react'
-import { style, mediaQueries } from '../constants'
+import { styles } from '../constants'
 
 class ScrollBtn extends Component {
-  componentDidMount() {
-    window.onscroll = function(){
-      const button = document.getElementById('back_top')
-      if (!button.classList.contains("hide") && document.body.scrollTop < 900) {
-        button.classList.add('hide')
-      }
-      else if (button.classList.contains("hide") && document.body.scrollTop >= 900) {
-        button.classList.remove('hide')
-      }
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      show: false
     }
-    window.onscroll()
+
+    this.handleScroll = this.handleScroll.bind(this)
+  }
+
+  handleScroll() {
+    const scrollPosition =
+      window.pageYOffset || document.documentElement.scrollTop
+    if (scrollPosition < 900) {
+      this.setState({ show: false })
+    } else if (scrollPosition >= 900) {
+      this.setState({ show: true })
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 
   render() {
     return (
-
-    <div>
-      <div id="back_top">
+      <div className={`back-top ${this.state.show ? 'show' : ''}`}>
         <a href="#home">
           <i className="fa fa-angle-up" />
         </a>
-      </div>
-      <style jsx>{`
-        #back_top {
-          bottom: 20px;
-          position: fixed;
-          right: 30px;
-          z-index: 3;
-          box-sizing: border-box;
-          display: block;
-        }
-        #back_top a {
-          background: #000 none repeat scroll 0 0;
-          border-radius: 0;
-          color: #fff;
-          display: block;
-          font-size: 31px;
-          height: 52px;
-          line-height: 52px;
-          text-align: center;
-          vertical-align: top;
-          width: 52px;
-          text-decoration: none;
-          box-sizing: border-box;
-          opacity: 1;
-          transition: opacity .4s;
-        }
-        #back_top a:hover {
-          opacity: .57;
-          color: #228dcb;
-          fill: #228dcb;
-          text-decoration: none;
-          outline: 0;
-        }
-        #back_top i {
-          display: inline-block;
-          font: normal normal normal 14px/1 FontAwesome;
-          font-size: inherit;
-          text-rendering: auto;
-          -webkit-font-smoothing: antialiased;
-        }
-        #back_top.hide a {
-          opacity: 0;
-        }
+
+        <style jsx>{`
+          .back-top {
+            display: block;
+            position: fixed;
+            right: 30px;
+            bottom: 20px;
+            width: 52px;
+            height: 52px;
+            z-index: 3;
+          }
+          
+          a {
+            display: block;
+            width: 52px;
+            height: 52px;
+            line-height: 52px;
+            font-size: 31px;
+            background: #000;
+            color: ${styles.mainColor3};
+            text-align: center;
+            text-decoration: none;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .4s;
+          }
+          
+          .back-top a:hover {
+            opacity: .57;
+            color: ${styles.mainColor5};
+            fill: ${styles.mainColor5};
+            text-decoration: none;
+            outline: 0;
+          }
+          
+           i {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: inherit;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+          }
+          
+          .show a {
+            visibility: visible;
+            opacity: 1;
+          }
       `}</style>
-    </div>
+      </div>
     )
   }
 }

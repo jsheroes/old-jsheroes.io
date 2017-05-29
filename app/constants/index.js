@@ -13,5 +13,6 @@ module.exports = {
     L: '992px',
     S: '768px'
   },
-  JSHeroesMapApiKey: 'AIzaSyAswFS24FiMHSvmwbU1ctvMSuQ3vb6D8l8'
+  ConferenceStartTime: '2017-06-08 08:00',
+  ConferenceMapApiKey: 'AIzaSyAswFS24FiMHSvmwbU1ctvMSuQ3vb6D8l8'
 }

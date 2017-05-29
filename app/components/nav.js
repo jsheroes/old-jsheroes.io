@@ -55,7 +55,7 @@ export default class Nav extends Component {
                 : ''
               return (
                 <li key={key}>
-                  <a href={item.url} className={active}>{item.label}</a>
+                  <a href={`/${item.url}`} className={active}>{item.label}</a>
                 </li>
               )
             })}
@@ -87,7 +87,7 @@ export default class Nav extends Component {
 
 
           li {
-            margin: 0 15px;
+            margin: 0 25px;
             display: inline-block;
           }
 

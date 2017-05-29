@@ -53,5 +53,10 @@ module.exports = [
     title: 'Spyhce',
     img: 'logo_spyhce.png',
     href: 'http://www.spyhce.com/'
+  },
+  {
+    title: 'Toptal',
+    img: 'logo_toptal.png',
+    href: 'https://www.toptal.com/'
   }
 ]

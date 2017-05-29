@@ -1,4 +1,4 @@
-import Section from './common/section'
+import Link from 'next/link'
 import { style, mediaQueries } from '../constants'
 
 const Tickets = props => (
@@ -21,14 +21,9 @@ const Tickets = props => (
             </div>
             <br />
             <div>
-              <a
-                href="/tickets"
-                id="tickets_btn"
-                style={{ fontSize: '30px' }}
-                target="_blank"
-              >
-                TICKETS
-              </a>
+              <Link href="/tickets">
+                <a id="tickets_btn" style={{ fontSize: '30px' }}>TICKETS</a>
+              </Link>
               <br />
               <br />
               <p><small>*this event is non-profit</small></p>

@@ -88,5 +88,40 @@ module.exports = [
     title: 'Munich JS - JavaScript User Group',
     img: 'logo_munich_js.png',
     href: 'https://www.meetup.com/MunichJS-User-Group/'
+  },
+  {
+    title: 'BerlinJS',
+    img: 'logo_berlinjs.jpg',
+    href: 'https://www.meetup.com/fullstack-berlin/photos/26557786/444342102/'
+  },
+  {
+    title: 'NodeJS Stuttgart',
+    img: 'logo_nodejs_stuttgart.jpeg',
+    href: 'https://www.meetup.com/nodestuttgart/'
+  },
+  {
+    title: 'VueJS Berlin',
+    img: 'logo_vuejs_berlin.jpg',
+    href: 'https://www.meetup.com/Vue-js-Berlin/'
+  },
+  {
+    title: 'KarlsruheJS',
+    img: 'logo_karlsruhejs.jpeg',
+    href: 'https://www.meetup.com/KarlsruheJS/'
+  },
+  {
+    title: 'StockholmEmberJS',
+    img: 'logo_stockholm_emberjs.jpeg',
+    href: 'https://www.meetup.com/Stockholm-Ember-js-Meetup/'
+  },
+  {
+    title: 'JSBelgrade',
+    img: 'logo_jsbelgrade.jpeg',
+    href: 'https://www.meetup.com/JS-Belgrade-Meetup/'
+  },
+  {
+    title: 'AngularBudapest',
+    img: 'logo_angularjs_budapest.jpeg',
+    href: 'https://www.meetup.com/AngularBP/'
   }
 ]

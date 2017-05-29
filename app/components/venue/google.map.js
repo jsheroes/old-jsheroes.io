@@ -2,7 +2,7 @@ import { Component } from 'react'
 import GoogleMapReact from 'google-map-react'
 
 import MapPin from './google.map.pin'
-import { JSHeroesMapApiKey, mediaQueries } from '../../constants'
+import { ConferenceMapApiKey, mediaQueries } from '../../constants'
 
 export default class GoogleMap extends Component {
   constructor(props) {
@@ -42,7 +42,7 @@ export default class GoogleMap extends Component {
         <GoogleMapReact
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
-          bootstrapURLKeys={{ key: JSHeroesMapApiKey }}
+          bootstrapURLKeys={{ key: ConferenceMapApiKey }}
           options={this.createMapOptions}
         >
           <MapPin lat={46.752870} lng={23.605845} />

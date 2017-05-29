@@ -1,11 +1,10 @@
 import { Component } from 'react'
-import Router from 'next/router'
 import Link from 'next/link'
-import { styles, mediaQueries } from '../../constants'
+import { styles, mediaQueries, ConferenceStartTime } from '../../constants'
 
 let interval
 const time = () => {
-  const launchDate = new Date('2017-06-08 00:00').getTime()
+  const launchDate = new Date(ConferenceStartTime).getTime()
   const cDate = new Date().getTime()
   let ms = launchDate - cDate
   ms = ms <= 0 ? 0 : ms
@@ -13,7 +12,9 @@ const time = () => {
   return {
     ms,
     days: formatNumber(Math.floor(ms / (1000 * 60 * 60 * 24))),
-    hours: formatNumber(Math.floor(ms % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))),
+    hours: formatNumber(
+      Math.floor(ms % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
+    ),
     minutes: formatNumber(Math.floor(ms % (1000 * 60 * 60) / (1000 * 60))),
     seconds: formatNumber(Math.floor(ms % (1000 * 60) / 1000))
   }
@@ -21,7 +22,7 @@ const time = () => {
 
 function formatNumber(number) {
   number = number.toString()
-  return number.length == 1 ? "0" + number : number
+  return number.length == 1 ? '0' + number : number
 }
 
 export default class CountDownAndTickets extends Component {
@@ -105,9 +106,9 @@ export default class CountDownAndTickets extends Component {
             border-radius: 0;
             font-size: 44px!important;
             font-weight: 600!important;
-            background: #228dcb;
-            color: #fff;
-            fill: #228dcb;
+            background: ${styles.mainColor5};
+            color: ${styles.mainColor3};
+            fill: ${styles.mainColor5};
             line-height: 1;
             text-transform: capitalize;
             -webkit-transition: all .5s linear;
@@ -134,17 +135,17 @@ export default class CountDownAndTickets extends Component {
           }
     
           .counter-sec {
-            position:absolute;
-            bottom:0;
-            left:0;
-            right:0;
-            padding:0 15px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 0 15px;
             display: flex;
             align-items: center;
           }
           
           .countdown-comming-soon-label {
-            color:#fff;
+            color: ${styles.mainColor3};
             margin-bottom: 0;
             line-height: 90px;
             font-size: 32px;
@@ -152,65 +153,65 @@ export default class CountDownAndTickets extends Component {
           }
           
           .half-width {
-            width:50%;
-            float:left;
-            text-align: center
+            width: 50%;
+            float: left;
+            text-align: center;
           }
           
           .coming-timer {
-            margin:0 auto;
-            background:#161616;
-            padding:22px 0;
+            margin: 0 auto;
+            background: ${styles.mainColor2};
+            padding: 22px 0;
           }
           
           .countdown-counter {
-            margin:0 auto;
-            padding:22px 0;
-            background:rgba(34,34,34,0.65);
+            margin: 0 auto;
+            padding: 22px 0;
+            background: rgba(34, 34, 34, .65);
           }
           
           .countdown-amount:after {
-            content:"";
-            height:100%;
-            width:1px;
-            background:#444445;
-            position:absolute;
-            top:0;
-            right:-21px;
+            content: "";
+            height: 100%;
+            width: 1px;
+            background: #444445;
+            position: absolute;
+            top: 0;
+            right: -21px;
           }
           
           .countdown-amount:last-child:after {
-            margin:0;
-            width:0;
+            margin: 0;
+            width: 0;
           }
           
           .countdown-amount:last-child {
-            margin:0;
+            margin: 0;
           }
           
           .countdown-period {
-            display:block;
-            font-size:17px;
-            line-height:1;
-            text-align:center;
-            font-weight:300;
-            margin-top:3px;
-            text-transform:capitalize;
+            display: block;
+            font-size: 17px;
+            line-height: 1;
+            text-align: center;
+            font-weight: 300;
+            margin-top: 3px;
+            text-transform: capitalize;
           }
           
           .countdown-amount {
-            color:#fff;
-            font-size:50px;
-            font-weight:700;
-            display:inline-block;
-            list-style:outside none none;
-            margin:0 42px 0 auto;
-            padding:15px 0;
-            text-align:center;
-            width:auto;
-            position:relative;
-            line-height:1;
-            vertical-align:middle;
+            color: ${styles.mainColor3};
+            font-size: 50px;
+            font-weight: 700;
+            display: inline-block;
+            list-style: outside none none;
+            margin: 0 42px 0 auto;
+            padding: 15px 0;
+            text-align: center;
+            width: auto;
+            position: relative;
+            line-height: 1;
+            vertical-align: middle;
           }
           
           @media (min-width: ${mediaQueries.S}) {
@@ -220,23 +221,23 @@ export default class CountDownAndTickets extends Component {
               padding: 40px 38px;
             }
             .countdown-amount {
-            	font-size:34px;
-            	margin:0 auto;
-            	padding:8px 0;
-            	width:85px;
+            	font-size: 34px;
+            	margin: 0 auto;
+            	padding: 8px 0;
+            	width: 85px;
             }
             .countdown-period {
-            	font-size:16px;
+            	font-size: 16px;
             }
             .countdown-amount::after {
-            	right:0;
+            	right: 0;
             }
           }
           
           @media (min-width: ${mediaQueries.L}) {
             .btn.btn-lg {
-            	padding:50px 58px;
-            	font-size:40px !important;
+            	padding: 50px 58px;
+            	font-size: 40px !important;
             	font-weight: 600!important;
             }
             .countdown-amount {
@@ -266,47 +267,47 @@ export default class CountDownAndTickets extends Component {
             	flex-flow: column;
             }
             .half-width {
-            	float:none;
-            	width:100%;
+            	float: none;
+            	width: 100%;
             }
             .countdown-amount {
-            	font-size:36px;
-            	margin:0 auto;
-            	padding:8px 0;
-            	width:120px;
+            	font-size: 36px;
+            	margin: 0 auto;
+            	padding: 8px 0;
+            	width: 120px;
             }
             .countdown-period {
-            	font-size:18px;
+            	font-size: 18px;
             }
             .countdown-amount::after {
-            	right:0;
+            	right: 0;
             }
             .btn.btn-lg {
-            	font-size:25px !important;
-            	padding:25px 10px;
-            	width:100%;
+            	font-size: 25px !important;
+            	padding: 25px 10px;
+            	width: 100%;
             }
             .btn.btn-lg::after {
-            	font-size:24px;
+            	font-size: 24px;
             }
             .countdown-counter {
-            	padding:12px 0;
+            	padding: 12px 0;
             }
           }
           @media (max-width:479px) {
             .countdown-amount {
-            	font-size:26px;
-            	width:72px;
+            	font-size: 26px;
+            	width: 72px;
             }
             .countdown-period {
-            	font-size:16px;
+            	font-size: 16px;
             }
             .banner-tagline p {
-            	font-size:18px;
-            	margin-top:10px;
+            	font-size: 18px;
+            	margin-top: 10px;
             }
             .btn.btn-lg {
-            	width:100%;
+            	width: 100%;
             }
           }
           
