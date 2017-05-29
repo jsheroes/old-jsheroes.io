@@ -85,7 +85,6 @@ export default class Nav extends Component {
             display: inline-block;
           }
 
-
           li {
             margin: 0 25px;
             display: inline-block;
@@ -165,17 +164,29 @@ export default class Nav extends Component {
             nav {
               width: 720px;
             }
+            
+            li {
+              margin: 0 17px;
+            }
           }
           
           @media (min-width: ${mediaQueries.L}) {
             nav {
               width: 960px;
             }
+            
+            li {
+              margin: 0 15px;
+            }
           }
           
           @media (min-width: ${mediaQueries.XL}) {
             nav {
               width: 1140px;
+            }
+            
+            li {
+              margin: 0 25px;
             }
           }
         
