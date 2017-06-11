@@ -1,39 +1,24 @@
 import { Component } from 'react'
 import Link from 'next/link'
 import { styles, mediaQueries, ConferenceStartTime } from '../../constants'
+import time from '../..//utils/helpers'
 
 let interval
-const time = () => {
-  const launchDate = new Date(ConferenceStartTime).getTime()
-  const cDate = new Date().getTime()
-  let ms = launchDate - cDate
-  ms = ms <= 0 ? 0 : ms
-
-  return {
-    ms,
-    days: formatNumber(Math.floor(ms / (1000 * 60 * 60 * 24))),
-    hours: formatNumber(
-      Math.floor(ms % (1000 * 60 * 60 * 24) / (1000 * 60 * 60))
-    ),
-    minutes: formatNumber(Math.floor(ms % (1000 * 60 * 60) / (1000 * 60))),
-    seconds: formatNumber(Math.floor(ms % (1000 * 60) / 1000))
-  }
-}
-
-function formatNumber(number) {
-  number = number.toString()
-  return number.length == 1 ? '0' + number : number
-}
 
 export default class CountDownAndTickets extends Component {
   constructor(props) {
     super(props)
+
     this.state = {
-      ...time()
+      ms: props.date.ms,
+      days: props.date.days,
+      hours: props.date.hours,
+      minutes: props.date.minutes,
+      seconds: props.date.seconds
     }
   }
 
-  componentWillMount() {
+  componentDidMount() {
     interval = setInterval(() => {
       const newState = time()
 
@@ -41,11 +26,6 @@ export default class CountDownAndTickets extends Component {
         clearInterval(interval)
         return
       }
-
-      // if (interval && pathName !== '/') {
-      // clearInterval(interval);
-      //   return
-      // }
 
       this.setState(newState)
     }, 1000)

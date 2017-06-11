@@ -72,7 +72,7 @@ class Hero extends Component {
               <br />
             </div>
 
-            <CountDownAndTickets />
+            <CountDownAndTickets date={this.props.date} />
           </div>
         </ScrollableAnchor>
 

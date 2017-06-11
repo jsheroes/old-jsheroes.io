@@ -98,7 +98,7 @@ const ClujsersMain = () => (
         <li>
           Our <strong>Code of Conduct</strong> is
           {' '}
-          <Link href="http://jsheroes.io/code-of-conduct">
+          <Link href="/code-of-conduct">
             <a target="_blank">here</a>
           </Link>
         </li>

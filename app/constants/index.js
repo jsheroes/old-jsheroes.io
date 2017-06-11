@@ -13,6 +13,6 @@ module.exports = {
     L: '992px',
     S: '768px'
   },
-  ConferenceStartTime: '2017-06-08 08:00',
+  ConferenceStartTime: '2017-06-18 08:00',
   ConferenceMapApiKey: 'AIzaSyAswFS24FiMHSvmwbU1ctvMSuQ3vb6D8l8'
 }
