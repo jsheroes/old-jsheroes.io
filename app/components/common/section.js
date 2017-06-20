@@ -1,4 +1,5 @@
 import { style, mediaQueries } from '../../constants'
+import PropTypes from 'prop-types'
 
 const Section = props => (
   <section style={props.section.style}>
@@ -41,6 +42,15 @@ Section.defaultProps = {
   mainContainer: {
     style: {}
   }
+}
+
+Section.propTypes = {
+  section: PropTypes.shape({
+    style: PropTypes.object
+  }),
+  mainContainer: PropTypes.shape({
+    style: PropTypes.object
+  })
 }
 
 module.exports = Section

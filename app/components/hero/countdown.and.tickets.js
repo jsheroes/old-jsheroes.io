@@ -1,6 +1,6 @@
 import { Component } from 'react'
 import Link from 'next/link'
-import { styles, mediaQueries, ConferenceStartTime } from '../../constants'
+import { styles, mediaQueries } from '../../constants'
 import time from '../..//utils/helpers'
 
 let interval
