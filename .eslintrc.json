@@ -1,11 +1,15 @@
 {
-  "extends": "eslint:recommended",
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
   "parser": "babel-eslint",
   "env": {
     "browser": true,
     "node": true
   },
   "rules": {
-    "react/jsx-uses-vars": 2
+    "no-unused-vars": 1,
+    "react/jsx-uses-vars": 2,
+    "react/react-in-jsx-scope": 0,
+    "react/prop-types": 1,
+    "react/display-name": 1
   }
 }
