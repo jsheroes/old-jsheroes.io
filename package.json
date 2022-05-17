@@ -15,7 +15,7 @@
   "license": "ISC",
   "dependencies": {
     "aphrodite": "^1.2.1",
-    "caniuse-api": "^2.0.0",
+    "caniuse-api": "^3.0.0",
     "express": "^4.15.2",
     "google-map-react": "^0.24.0",
     "isomorphic-unfetch": "^1.0.0",
